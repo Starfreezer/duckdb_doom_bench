@@ -33,7 +33,7 @@ end
 # Unset irrelevant variables.
 deactivate nondestructive
 
-set -gx VIRTUAL_ENV /home/lukas_eisenstecken/sqldoom/bench/texture_acess/.venv
+set -gx VIRTUAL_ENV /home/lukas_eisenstecken/sqldoom/bench/texture_access/.venv
 
 set -gx _OLD_VIRTUAL_PATH $PATH
 set -gx PATH "$VIRTUAL_ENV/"bin $PATH

@@ -1,4 +1,4 @@
-#!/home/lukas_eisenstecken/sqldoom/bench/texture_acess/.venv/bin/python3
+#!/home/lukas_eisenstecken/sqldoom/bench/texture_access/.venv/bin/python3
 # -*- coding: utf-8 -*-
 import re
 import sys
