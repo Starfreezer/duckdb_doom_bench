@@ -7,25 +7,28 @@ Calculating python checksum
 checksum duckdb 2549839
 checksum python 2549839
 Checksum phase passed
-Warmup time elapsed 0.2401749729997391 seconds
+Warmup time elapsed 2.4341306240000904 seconds
 
+####################################################################################################
 Beginning benchmark for wall like acesses
-Total time taken for 1000000 wall like acesses: 2.408242801999222 seconds
-Mean: 48.16372208017128 ms
-Median: 47.954626999853645 ms
-Standard deviation: 0.69 ms
+Total time taken for 10000000 wall like acesses: 24.39452208399996 seconds
+Mean: 48.788001034000445 ms
+Median: 48.45050149998542 ms
+Standard deviation: 1.06 ms
 
+####################################################################################################
 Beginn benchmark for wall like acesses SCAN ONLY
-Total time taken for 1000000 wall like acesses SCAN ONLY: 0.01943185900017852 seconds
-Mean: 0.3880112400293001 ms
-Median: 0.36681450001196936 ms
-Standard deviation: 0.04 ms
+Total time taken for 10000000 wall like acesses SCAN ONLY: 0.1864300600000206 seconds
+Mean: 0.37223305200336654 ms
+Median: 0.3513135000048351 ms
+Standard deviation: 0.07 ms
 
+####################################################################################################
 Begin Benchmark for wall like acesses JOINS only
-Total time taken for 1000000 wall like acesses JOIN ONLY: 0.03948674899947946 seconds
-Mean: 0.7890675600719987 ms
-Median: 0.760357500439568 ms
-Standard deviation: 0.17 ms
+Total time taken for 10000000 wall like acesses JOIN ONLY: 0.371500142000059 seconds
+Mean: 0.7422636539984069 ms
+Median: 0.7356099999924481 ms
+Standard deviation: 0.03 ms
 
 Creating column major texture lists
 Inserting column major textures
@@ -33,13 +36,14 @@ Calculating column major sql checksum
 checksum duckdb column major 2549839
 checksum python 2549839
 Column major checksum phase passed
-Column major warmup time elapsed 0.23953959099890199 seconds
+Column major warmup time elapsed 2.428453682000054 seconds
 
+####################################################################################################
 Beginning benchmark for wall like acesses COLUMN MAJOR
-Total time taken for 1000000 wall like acesses COLUMN MAJOR: 2.444410236001204 seconds
-Mean: 48.88738630001171 ms
-Median: 48.77860249962396 ms
-Standard deviation: 0.70 ms
+Total time taken for 10000000 wall like acesses COLUMN MAJOR: 24.44480097899998 seconds
+Mean: 48.888485853996144 ms
+Median: 48.52104350004538 ms
+Standard deviation: 1.21 ms
 
         Result: List lookup for textures is very expensive in duckdb and does not compete with cedar_dbs byte reader
     
@@ -80,36 +84,67 @@ Calculating texture column based sql checksum
 checksum duckdb texture column based 2549839
 checksum python 2549839
 Texture column based checksum phase passed
-Texture column based warmup time elapsed 0.009681249001005199 seconds
+Texture column based warmup time elapsed 0.09526691700000356 seconds
 
+####################################################################################################
 Beginning benchmark for wall like acesses TEXTURE COLUMN BASED
-Total time taken for 1000000 wall like acesses TEXTURE COLUMN BASED: 0.09479429299972253 seconds
-Mean: 1.895179400089546 ms
-Median: 1.8913245003204793 ms
-Standard deviation: 0.03 ms
+Total time taken for 10000000 wall like acesses TEXTURE COLUMN BASED: 0.9562948630000392 seconds
+Mean: 1.9117065159985032 ms
+Median: 1.8999129999883735 ms
+Standard deviation: 0.12 ms
 
 Moving to one row per texture pixel
 Creating texture pixel rows from original textures
-Creating tex 0/20 with 8192 pixels
-Creating tex 1/20 with 8192 pixels
-Creating tex 2/20 with 8192 pixels
-Creating tex 3/20 with 8192 pixels
-Creating tex 4/20 with 8192 pixels
-Creating tex 5/20 with 8192 pixels
-Creating tex 6/20 with 8192 pixels
-Creating tex 7/20 with 8192 pixels
-Creating tex 8/20 with 8192 pixels
-Creating tex 9/20 with 8192 pixels
-Creating tex 10/20 with 8192 pixels
-Creating tex 11/20 with 8192 pixels
-Creating tex 12/20 with 8192 pixels
-Creating tex 13/20 with 8192 pixels
-Creating tex 14/20 with 8192 pixels
-Creating tex 15/20 with 8192 pixels
-Creating tex 16/20 with 8192 pixels
-Creating tex 17/20 with 8192 pixels
-Creating tex 18/20 with 8192 pixels
-Creating tex 19/20 with 8192 pixels
+Creating tex 0/50 with 8192 pixels
+Creating tex 1/50 with 8192 pixels
+Creating tex 2/50 with 8192 pixels
+Creating tex 3/50 with 8192 pixels
+Creating tex 4/50 with 8192 pixels
+Creating tex 5/50 with 8192 pixels
+Creating tex 6/50 with 8192 pixels
+Creating tex 7/50 with 8192 pixels
+Creating tex 8/50 with 8192 pixels
+Creating tex 9/50 with 8192 pixels
+Creating tex 10/50 with 8192 pixels
+Creating tex 11/50 with 8192 pixels
+Creating tex 12/50 with 8192 pixels
+Creating tex 13/50 with 8192 pixels
+Creating tex 14/50 with 8192 pixels
+Creating tex 15/50 with 8192 pixels
+Creating tex 16/50 with 8192 pixels
+Creating tex 17/50 with 8192 pixels
+Creating tex 18/50 with 8192 pixels
+Creating tex 19/50 with 8192 pixels
+Creating tex 20/50 with 8192 pixels
+Creating tex 21/50 with 8192 pixels
+Creating tex 22/50 with 8192 pixels
+Creating tex 23/50 with 8192 pixels
+Creating tex 24/50 with 8192 pixels
+Creating tex 25/50 with 8192 pixels
+Creating tex 26/50 with 8192 pixels
+Creating tex 27/50 with 8192 pixels
+Creating tex 28/50 with 8192 pixels
+Creating tex 29/50 with 8192 pixels
+Creating tex 30/50 with 8192 pixels
+Creating tex 31/50 with 8192 pixels
+Creating tex 32/50 with 8192 pixels
+Creating tex 33/50 with 8192 pixels
+Creating tex 34/50 with 8192 pixels
+Creating tex 35/50 with 8192 pixels
+Creating tex 36/50 with 8192 pixels
+Creating tex 37/50 with 8192 pixels
+Creating tex 38/50 with 8192 pixels
+Creating tex 39/50 with 8192 pixels
+Creating tex 40/50 with 8192 pixels
+Creating tex 41/50 with 8192 pixels
+Creating tex 42/50 with 8192 pixels
+Creating tex 43/50 with 8192 pixels
+Creating tex 44/50 with 8192 pixels
+Creating tex 45/50 with 8192 pixels
+Creating tex 46/50 with 8192 pixels
+Creating tex 47/50 with 8192 pixels
+Creating tex 48/50 with 8192 pixels
+Creating tex 49/50 with 8192 pixels
 ┌────────────┬───────┬───────┬───────────────┐
 │ texture_id │   u   │   v   │ palette_index │
 │   int32    │ int32 │ int32 │     uint8     │
@@ -125,12 +160,13 @@ Calculating texture pixel based sql checksum
 checksum duckdb texture pixel based 2549839
 checksum python 2549839
 Texture pixel based checksum phase passed
-Texture pixel based warmup time elapsed 0.007389757000055397 seconds
+Texture pixel based warmup time elapsed 0.07060982600000898 seconds
 
+####################################################################################################
 Beginning benchmark for wall like acesses TEXTURE PIXEL BASED
-Total time taken for 1000000 wall like acesses TEXTURE PIXEL BASED: 0.0711536229991907 seconds
-Mean: 1.4223810000839876 ms
-Median: 1.422462500158872 ms
+Total time taken for 10000000 wall like acesses TEXTURE PIXEL BASED: 0.7084159200001068 seconds
+Mean: 1.415961688000607 ms
+Median: 1.3944519999995464 ms
 Standard deviation: 0.07 ms
 
 Moving to texture stored as BLOB
@@ -139,25 +175,27 @@ Calculating BLOB based sql checksum
 checksum duckdb BLOB based 2549839
 checksum python 2549839
 BLOB based checksum phase passed
-BLOB based warmup time elapsed 0.024173111998607055 seconds
+BLOB based warmup time elapsed 0.1827132870000696 seconds
 
+####################################################################################################
 Beginning benchmark for wall like acesses BLOB BASED
-Total time taken for 1000000 wall like acesses BLOB BASED: 0.1721690859994851 seconds
-Mean: 3.442673039935471 ms
-Median: 3.4443179993104422 ms
-Standard deviation: 0.08 ms
+Total time taken for 10000000 wall like acesses BLOB BASED: 1.8007616590000453 seconds
+Mean: 3.6006302019964096 ms
+Median: 3.4545470000466594 ms
+Standard deviation: 0.86 ms
 
+####################################################################################################
 Testing texture table size with identical wall like sample accesses
 
 Creating texture column based table with 3 textures
 Creating tex 0/3
 Creating tex 1/3
 Creating tex 2/3
-Warmup time for 3 textures: 0.009869408999293228 seconds
+Warmup time for 3 textures: 0.09270660200013481 seconds
 Texture count: 3
-Mean: 1.948785740059975 ms
-Median: 1.9493825002427911 ms
-Standard deviation: 0.04 ms
+Mean: 1.8449663620017418 ms
+Median: 1.8369730001950302 ms
+Standard deviation: 0.13 ms
 
 EXPLAIN ANALYZE for 3 textures
 ╭─ Summary ───────────╮
@@ -201,10 +239,10 @@ Creating tex 6/10
 Creating tex 7/10
 Creating tex 8/10
 Creating tex 9/10
-Warmup time for 10 textures: 0.009850217000348493 seconds
+Warmup time for 10 textures: 0.09229091500014874 seconds
 Texture count: 10
-Mean: 1.9580271798622562 ms
-Median: 1.9541294986993307 ms
+Mean: 1.8596210220034664 ms
+Median: 1.8515840000645767 ms
 Standard deviation: 0.04 ms
 
 Creating texture column based table with 50 textures
@@ -258,11 +296,11 @@ Creating tex 46/50
 Creating tex 47/50
 Creating tex 48/50
 Creating tex 49/50
-Warmup time for 50 textures: 0.010266645000228891 seconds
+Warmup time for 50 textures: 0.09317988700013302 seconds
 Texture count: 50
-Mean: 1.97498510038713 ms
-Median: 1.9780825014095171 ms
-Standard deviation: 0.06 ms
+Mean: 1.917185989999325 ms
+Median: 1.9065190000446819 ms
+Standard deviation: 0.07 ms
 
 Creating texture column based table with 200 textures
 Creating tex 0/200
@@ -465,15 +503,15 @@ Creating tex 196/200
 Creating tex 197/200
 Creating tex 198/200
 Creating tex 199/200
-Warmup time for 200 textures: 0.007051425000099698 seconds
+Warmup time for 200 textures: 0.06119526800011954 seconds
 Texture count: 200
-Mean: 1.2622773799739662 ms
-Median: 1.2523665009211982 ms
-Standard deviation: 0.07 ms
+Mean: 1.1978436779950243 ms
+Median: 1.19344650011044 ms
+Standard deviation: 0.04 ms
 
 EXPLAIN ANALYZE for 200 textures
 ╭─ Summary ───────────╮
-│ Total Time: 0.0010s │
+│ Total Time: 0.0009s │
 ╰─────────────────────╯
 ╭─ Ungrouped Aggregate ────────────────────────────────────────╮
 │ Aggregates: sum(#0)                                          │
@@ -503,19 +541,21 @@ EXPLAIN ANALYZE for 200 textures
 ╰──────────────────────────────────────────────────────────────╯
 
 
+####################################################################################################
 Next access pattern FLATS
 Creating FLATS
 Creating sweep like samples
 Calculating checksums
 Checksum phase passed
 
-FLATS list warmup time elapsed 0.12971524100066745 seconds
+FLATS list warmup time elapsed 1.2302852880000046 seconds
 
+####################################################################################################
 Beginning benchmark for FLATS SWEEP LIST
-Total time taken for 1000000 FLATS SWEEP LIST acesses: 1.283846355001515 seconds
-Mean: 25.6761554800687 ms
-Median: 25.55301899974438 ms
-Standard deviation: 0.47 ms
+Total time taken for 10000000 FLATS SWEEP LIST acesses: 12.748421027999939 seconds
+Mean: 25.49585865399922 ms
+Median: 25.648956000054568 ms
+Standard deviation: 0.94 ms
 Creating flats row based representation
 ┌────────────┬───────┬─────────────────────────────────────────────────────────────────────────────────────────────────┐
 │ texture_id │  row  │                                             pixels                                              │
@@ -551,36 +591,67 @@ Calculating FLATS row based checksum
 checksum duckdb FLATS row based 2560043
 checksum python 2560043
 FLATS row based checksum phase passed
-FLATS row based warmup time elapsed 0.008083373000772553 seconds
+FLATS row based warmup time elapsed 0.07837122000000818 seconds
 
+####################################################################################################
 Beginning benchmark for FLATS SWEEP ROW BASED
-Total time taken for 1000000 FLATS SWEEP ROW BASED acesses: 0.07972420300029626 seconds
-Mean: 1.5937643200231832 ms
-Median: 1.6006064997782232 ms
-Standard deviation: 0.05 ms
+Total time taken for 10000000 FLATS SWEEP ROW BASED acesses: 0.7644166640000094 seconds
+Mean: 1.5279589780043352 ms
+Median: 1.5228569999408137 ms
+Standard deviation: 0.04 ms
 
 Moving to one row per FLATS pixel
 Creating FLATS pixel rows from original FLATS
-Creating tex 0/20 with 4096 pixels
-Creating tex 1/20 with 4096 pixels
-Creating tex 2/20 with 4096 pixels
-Creating tex 3/20 with 4096 pixels
-Creating tex 4/20 with 4096 pixels
-Creating tex 5/20 with 4096 pixels
-Creating tex 6/20 with 4096 pixels
-Creating tex 7/20 with 4096 pixels
-Creating tex 8/20 with 4096 pixels
-Creating tex 9/20 with 4096 pixels
-Creating tex 10/20 with 4096 pixels
-Creating tex 11/20 with 4096 pixels
-Creating tex 12/20 with 4096 pixels
-Creating tex 13/20 with 4096 pixels
-Creating tex 14/20 with 4096 pixels
-Creating tex 15/20 with 4096 pixels
-Creating tex 16/20 with 4096 pixels
-Creating tex 17/20 with 4096 pixels
-Creating tex 18/20 with 4096 pixels
-Creating tex 19/20 with 4096 pixels
+Creating tex 0/50 with 4096 pixels
+Creating tex 1/50 with 4096 pixels
+Creating tex 2/50 with 4096 pixels
+Creating tex 3/50 with 4096 pixels
+Creating tex 4/50 with 4096 pixels
+Creating tex 5/50 with 4096 pixels
+Creating tex 6/50 with 4096 pixels
+Creating tex 7/50 with 4096 pixels
+Creating tex 8/50 with 4096 pixels
+Creating tex 9/50 with 4096 pixels
+Creating tex 10/50 with 4096 pixels
+Creating tex 11/50 with 4096 pixels
+Creating tex 12/50 with 4096 pixels
+Creating tex 13/50 with 4096 pixels
+Creating tex 14/50 with 4096 pixels
+Creating tex 15/50 with 4096 pixels
+Creating tex 16/50 with 4096 pixels
+Creating tex 17/50 with 4096 pixels
+Creating tex 18/50 with 4096 pixels
+Creating tex 19/50 with 4096 pixels
+Creating tex 20/50 with 4096 pixels
+Creating tex 21/50 with 4096 pixels
+Creating tex 22/50 with 4096 pixels
+Creating tex 23/50 with 4096 pixels
+Creating tex 24/50 with 4096 pixels
+Creating tex 25/50 with 4096 pixels
+Creating tex 26/50 with 4096 pixels
+Creating tex 27/50 with 4096 pixels
+Creating tex 28/50 with 4096 pixels
+Creating tex 29/50 with 4096 pixels
+Creating tex 30/50 with 4096 pixels
+Creating tex 31/50 with 4096 pixels
+Creating tex 32/50 with 4096 pixels
+Creating tex 33/50 with 4096 pixels
+Creating tex 34/50 with 4096 pixels
+Creating tex 35/50 with 4096 pixels
+Creating tex 36/50 with 4096 pixels
+Creating tex 37/50 with 4096 pixels
+Creating tex 38/50 with 4096 pixels
+Creating tex 39/50 with 4096 pixels
+Creating tex 40/50 with 4096 pixels
+Creating tex 41/50 with 4096 pixels
+Creating tex 42/50 with 4096 pixels
+Creating tex 43/50 with 4096 pixels
+Creating tex 44/50 with 4096 pixels
+Creating tex 45/50 with 4096 pixels
+Creating tex 46/50 with 4096 pixels
+Creating tex 47/50 with 4096 pixels
+Creating tex 48/50 with 4096 pixels
+Creating tex 49/50 with 4096 pixels
 ┌────────────┬───────┬───────┬───────────────┐
 │ texture_id │   u   │   v   │ palette_index │
 │   int32    │ int32 │ int32 │     uint8     │
@@ -596,12 +667,14 @@ Calculating FLATS pixel based checksum
 checksum duckdb FLATS pixel based 2560043
 checksum python 2560043
 FLATS pixel based checksum phase passed
-FLATS pixel based warmup time elapsed 0.0068575520017475355 seconds
+FLATS pixel based warmup time elapsed 0.06914235099998223 seconds
 
+####################################################################################################
 Beginning benchmark for FLATS SWEEP PIXEL BASED
-Total time taken for 1000000 FLATS SWEEP PIXEL BASED acesses: 0.06294036600047548 seconds
-Mean: 1.258124019841489 ms
-Median: 1.2465859990697936 ms
+Total time taken for 10000000 FLATS SWEEP PIXEL BASED acesses: 0.6898407349999616 seconds
+Mean: 1.3787635880025846 ms
+Median: 1.3627214999587522 ms
+Standard deviation: 0.07 ms
 
 Moving to FLATS stored as BLOB
 Creating FLATS BLOB representation
@@ -609,10 +682,1014 @@ Calculating FLATS BLOB based checksum
 checksum duckdb FLATS BLOB based 2560043
 checksum python 2560043
 FLATS BLOB based checksum phase passed
-FLATS BLOB based warmup time elapsed 0.014209228998879553 seconds
+FLATS BLOB based warmup time elapsed 0.13146650600015164 seconds
 
+####################################################################################################
 Beginning benchmark for FLATS SWEEP BLOB BASED
-Total time taken for 1000000 FLATS SWEEP BLOB BASED acesses: 0.12150154600021779 seconds
-Mean: 2.42934455996874 ms
-Median: 2.418605999991996 ms
-Standard deviation: 0.04 ms
+Total time taken for 10000000 FLATS SWEEP BLOB BASED acesses: 1.2940055340000072 seconds
+Mean: 2.587091949997557 ms
+Median: 2.547399999912159 ms
+
+####################################################################################################
+Next access pattern FLATS PERSPECTIVE LIKE
+Creating perspective like samples
+┌───────────┬────────────┬───────┬───────┐
+│ sample_id │ texture_id │   u   │   v   │
+│   int32   │   int32    │ int32 │ int32 │
+├───────────┼────────────┼───────┼───────┤
+│         0 │          0 │     0 │     0 │
+│         1 │          0 │     1 │     2 │
+│         2 │          0 │     2 │     4 │
+│         3 │          0 │     3 │     6 │
+│         4 │          0 │     4 │     8 │
+│         5 │          0 │     5 │    10 │
+│         6 │          0 │     6 │    12 │
+│         7 │          0 │     7 │    14 │
+│         8 │          0 │     8 │    16 │
+│         9 │          0 │     9 │    18 │
+└───────────┴────────────┴───────┴───────┘
+  10 rows                      4 columns
+
+Calculating FLATS PERSPECTIVE LIKE checksum
+checksum duckdb FLATS PERSPECTIVE LIKE list 2559210
+checksum python 2559210
+FLATS PERSPECTIVE LIKE list checksum phase passed
+FLATS PERSPECTIVE LIKE list warmup time elapsed 1.2845955509999385 seconds
+
+####################################################################################################
+Beginning benchmark for FLATS PERSPECTIVE LIKE LIST
+Total time taken for 10000000 FLATS PERSPECTIVE LIKE LIST acesses: 12.548762370000077 seconds
+Mean: 25.09660636999797 ms
+Median: 24.70388299991555 ms
+Standard deviation: 0.78 ms
+
+Calculating FLATS PERSPECTIVE LIKE row based checksum
+checksum duckdb FLATS PERSPECTIVE LIKE row based 2559210
+checksum python 2559210
+FLATS PERSPECTIVE LIKE row based checksum phase passed
+FLATS PERSPECTIVE LIKE row based warmup time elapsed 0.07858735099989644 seconds
+
+####################################################################################################
+Beginning benchmark for FLATS PERSPECTIVE LIKE ROW BASED
+Total time taken for 10000000 FLATS PERSPECTIVE LIKE ROW BASED acesses: 0.7876967360000435 seconds
+Mean: 1.5744784740027171 ms
+Median: 1.5725279998832775 ms
+Standard deviation: 0.06 ms
+
+Calculating FLATS PERSPECTIVE LIKE pixel based checksum
+checksum duckdb FLATS PERSPECTIVE LIKE pixel based 2559210
+checksum python 2559210
+FLATS PERSPECTIVE LIKE pixel based checksum phase passed
+FLATS PERSPECTIVE LIKE pixel based warmup time elapsed 0.07135074300003907 seconds
+
+####################################################################################################
+Beginning benchmark for FLATS PERSPECTIVE LIKE PIXEL BASED
+Total time taken for 10000000 FLATS PERSPECTIVE LIKE PIXEL BASED acesses: 0.7072049159999096 seconds
+Mean: 1.4135367900025813 ms
+Median: 1.3966555000024528 ms
+Standard deviation: 0.08 ms
+
+Calculating FLATS PERSPECTIVE LIKE BLOB based checksum
+checksum duckdb FLATS PERSPECTIVE LIKE BLOB based 2559210
+checksum python 2559210
+FLATS PERSPECTIVE LIKE BLOB based checksum phase passed
+FLATS PERSPECTIVE LIKE BLOB based warmup time elapsed 0.13158009699986906 seconds
+
+####################################################################################################
+Beginning benchmark for FLATS PERSPECTIVE LIKE BLOB BASED
+Total time taken for 10000000 FLATS PERSPECTIVE LIKE BLOB BASED acesses: 1.3185408619999635 seconds
+Mean: 2.6361845160017765 ms
+Median: 2.581039000006058 ms
+Standard deviation: 0.29 ms
+
+####################################################################################################
+Next access pattern SPRITES
+Creating SPRITES
+Creating SPRITES list representation
+Creating SPRITES column based representation
+┌───────────┬───────┬──────────────────────────────────────────────────────────────────────────────────────────────────┐
+│ sprite_id │  col  │                                               row                                                │
+│   int32   │ int32 │                                             uint8[]                                              │
+├───────────┼───────┼──────────────────────────────────────────────────────────────────────────────────────────────────┤
+│         0 │     0 │ [152, 32, 98, 98, 194, 142, 132, 14, 69, 101, 200, 103, 143, 137, 1, 102, 140, 3, 123, 83, 179,  │
+│           │       │  152, 229, 91, 131, 129, 69, 149, 99, 15, 219, 2, 160, 70, 127, 156, 82, 68, 235, 40, 249, 169,  │
+│           │       │  220, 114, 9, 37, 206, 182, 189, 17, 155, 55, 38, 148, 57, 178, 146, 248, 64, 18, 45, 15, 24,    │
+│           │       │  194]                                                                                            │
+├───────────┼───────┼──────────────────────────────────────────────────────────────────────────────────────────────────┤
+│         0 │     1 │ [18, 118, 197, 116, 145, 132, 6, 230, 48, 13, 240, 135, 85, 40, 127, 13, 130, 58, 70, 135, 118,  │
+│           │       │  215, 246, 13, 83, 83, 246, 108, 38, 199, 139, 179, 194, 73, 53, 187, 138, 138, 129, 152, 220,   │
+│           │       │  220, 37, 137, 28, 186, 231, 219, 141, 187, 176, 62, 71, 122, 66, 128, 43, 76, 207, 176, 180, 7, │
+│           │       │  21, 96]                                                                                         │
+├───────────┼───────┼──────────────────────────────────────────────────────────────────────────────────────────────────┤
+│         0 │     2 │ [61, 94, 28, 104, 124, 211, 200, 225, 107, 218, 140, 167, 154, 20, 109, 228, 46, 9, 35, 44, 114, │
+│           │       │  232, 38, 210, 245, 117, 174, 90, 58, 138, 134, 151, 96, 4, 21, 148, 235, 45, 180, 187, 10, 224, │
+│           │       │  32, 241, 216, 88, 251, 153, 140, 195, 186, 169, 173, 159, 172, 171, 138, 39, 5, 201, 109, 234,  │
+│           │       │  61, 73]                                                                                         │
+├───────────┼───────┼──────────────────────────────────────────────────────────────────────────────────────────────────┤
+│         0 │     3 │ [12, 13, 140, 189, 79, 73, 214, 157, 206, 216, 13, 208, 146, 8, 96, 215, 57, 92, 76, 11, 231,    │
+│           │       │  121, 120, 84, 125, 23, 33, 133, 228, 69, 205, 109, 221, 182, 64, 159, 153, 146, 70, 221, 72,    │
+│           │       │  69, 35, 50, 123, 63, 44, 241, 19, 0, 136, 230, 53, 39, 136, 171, 10, 167, 29, 71, 121, 145,     │
+│           │       │  135, 82]                                                                                        │
+├───────────┼───────┼──────────────────────────────────────────────────────────────────────────────────────────────────┤
+│         0 │     4 │ [1, 193, 28, 34, 91, 89, 18, 62, 173, 219, 143, 235, 93, 124, 191, 52, 26, 94, 154, 60, 231,     │
+│           │       │  180, 5, 130, 227, 249, 233, 209, 222, 67, 179, 205, 136, 129, 228, 214, 127, 206, 34, 47, 84,   │
+│           │       │  118, 20, 89, 156, 87, 60, 99, 202, 15, 43, 68, 221, 185, 201, 205, 34, 63, 199, 124, 23, 243,   │
+│           │       │  87, 4]                                                                                          │
+└───────────┴───────┴──────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+Creating SPRITES pixel based representation
+Creating sprite 0/50 with 4096 pixels
+Creating sprite 1/50 with 4096 pixels
+Creating sprite 2/50 with 4096 pixels
+Creating sprite 3/50 with 4096 pixels
+Creating sprite 4/50 with 4096 pixels
+Creating sprite 5/50 with 4096 pixels
+Creating sprite 6/50 with 4096 pixels
+Creating sprite 7/50 with 4096 pixels
+Creating sprite 8/50 with 4096 pixels
+Creating sprite 9/50 with 4096 pixels
+Creating sprite 10/50 with 4096 pixels
+Creating sprite 11/50 with 4096 pixels
+Creating sprite 12/50 with 4096 pixels
+Creating sprite 13/50 with 4096 pixels
+Creating sprite 14/50 with 4096 pixels
+Creating sprite 15/50 with 4096 pixels
+Creating sprite 16/50 with 4096 pixels
+Creating sprite 17/50 with 4096 pixels
+Creating sprite 18/50 with 4096 pixels
+Creating sprite 19/50 with 4096 pixels
+Creating sprite 20/50 with 4096 pixels
+Creating sprite 21/50 with 4096 pixels
+Creating sprite 22/50 with 4096 pixels
+Creating sprite 23/50 with 4096 pixels
+Creating sprite 24/50 with 4096 pixels
+Creating sprite 25/50 with 4096 pixels
+Creating sprite 26/50 with 4096 pixels
+Creating sprite 27/50 with 4096 pixels
+Creating sprite 28/50 with 4096 pixels
+Creating sprite 29/50 with 4096 pixels
+Creating sprite 30/50 with 4096 pixels
+Creating sprite 31/50 with 4096 pixels
+Creating sprite 32/50 with 4096 pixels
+Creating sprite 33/50 with 4096 pixels
+Creating sprite 34/50 with 4096 pixels
+Creating sprite 35/50 with 4096 pixels
+Creating sprite 36/50 with 4096 pixels
+Creating sprite 37/50 with 4096 pixels
+Creating sprite 38/50 with 4096 pixels
+Creating sprite 39/50 with 4096 pixels
+Creating sprite 40/50 with 4096 pixels
+Creating sprite 41/50 with 4096 pixels
+Creating sprite 42/50 with 4096 pixels
+Creating sprite 43/50 with 4096 pixels
+Creating sprite 44/50 with 4096 pixels
+Creating sprite 45/50 with 4096 pixels
+Creating sprite 46/50 with 4096 pixels
+Creating sprite 47/50 with 4096 pixels
+Creating sprite 48/50 with 4096 pixels
+Creating sprite 49/50 with 4096 pixels
+┌───────────┬───────┬───────┬───────────────┐
+│ sprite_id │   u   │   v   │ palette_index │
+│   int32   │ int32 │ int32 │     uint8     │
+├───────────┼───────┼───────┼───────────────┤
+│         0 │     0 │     0 │           152 │
+│         0 │     1 │     0 │            18 │
+│         0 │     2 │     0 │            61 │
+│         0 │     3 │     0 │            12 │
+│         0 │     4 │     0 │             1 │
+└───────────┴───────┴───────┴───────────────┘
+
+Creating SPRITES BLOB representation
+
+Creating SPRITE samples SCALE HALF (0.5)
+┌───────────┬───────────┬───────┬───────┐
+│ sample_id │ sprite_id │   u   │   v   │
+│   int32   │   int32   │ int32 │ int32 │
+├───────────┼───────────┼───────┼───────┤
+│         0 │         0 │     0 │     0 │
+│         1 │         1 │     0 │     0 │
+│         2 │         2 │     0 │     0 │
+│         3 │         3 │     0 │     0 │
+│         4 │         4 │     0 │     0 │
+│         5 │         5 │     0 │     0 │
+│         6 │         6 │     0 │     0 │
+│         7 │         7 │     0 │     0 │
+│         8 │         8 │     0 │     0 │
+│         9 │         9 │     0 │     0 │
+└───────────┴───────────┴───────┴───────┘
+  10 rows                     4 columns
+
+Calculating SPRITE SCALE HALF python checksum
+Calculating SPRITE SCALE HALF list checksum
+checksum duckdb SPRITE SCALE HALF list 2568443
+checksum python 2568443
+SPRITE SCALE HALF list checksum phase passed
+SPRITE SCALE HALF list warmup time elapsed 1.2859471130000202 seconds
+
+####################################################################################################
+Beginning benchmark for SPRITE SCALE HALF LIST
+Total time taken for 10000000 SPRITE SCALE HALF LIST acesses: 13.272395907000146 seconds
+Mean: 26.543722771997636 ms
+Median: 25.75488449997465 ms
+Standard deviation: 1.44 ms
+
+Calculating SPRITE SCALE HALF column based checksum
+checksum duckdb SPRITE SCALE HALF column based 2568443
+checksum python 2568443
+SPRITE SCALE HALF column based checksum phase passed
+SPRITE SCALE HALF column based warmup time elapsed 0.09967613699996036 seconds
+
+####################################################################################################
+Beginning benchmark for SPRITE SCALE HALF COLUMN BASED
+Total time taken for 10000000 SPRITE SCALE HALF COLUMN BASED acesses: 0.9768964519998917 seconds
+Mean: 1.9527843580058288 ms
+Median: 1.9449264999593652 ms
+Standard deviation: 0.06 ms
+
+Calculating SPRITE SCALE HALF pixel based checksum
+checksum duckdb SPRITE SCALE HALF pixel based 2568443
+checksum python 2568443
+SPRITE SCALE HALF pixel based checksum phase passed
+SPRITE SCALE HALF pixel based warmup time elapsed 0.15889247699988118 seconds
+
+####################################################################################################
+Beginning benchmark for SPRITE SCALE HALF PIXEL BASED
+Total time taken for 10000000 SPRITE SCALE HALF PIXEL BASED acesses: 1.6038936660002037 seconds
+Mean: 3.2067475119979463 ms
+Median: 3.193108499999653 ms
+Standard deviation: 0.10 ms
+
+Calculating SPRITE SCALE HALF BLOB based checksum
+checksum duckdb SPRITE SCALE HALF BLOB based 2568443
+checksum python 2568443
+SPRITE SCALE HALF BLOB based checksum phase passed
+SPRITE SCALE HALF BLOB based warmup time elapsed 0.17412719999992987 seconds
+
+####################################################################################################
+Beginning benchmark for SPRITE SCALE HALF BLOB BASED
+Total time taken for 10000000 SPRITE SCALE HALF BLOB BASED acesses: 1.6219426249999742 seconds
+Mean: 3.2430078599995795 ms
+Median: 3.14875700007633 ms
+Standard deviation: 0.34 ms
+
+Creating SPRITE samples SCALE ONE (1.0)
+┌───────────┬───────────┬───────┬───────┐
+│ sample_id │ sprite_id │   u   │   v   │
+│   int32   │   int32   │ int32 │ int32 │
+├───────────┼───────────┼───────┼───────┤
+│         0 │         0 │     0 │     0 │
+│         1 │         1 │     0 │     0 │
+│         2 │         2 │     0 │     0 │
+│         3 │         3 │     0 │     0 │
+│         4 │         4 │     0 │     0 │
+│         5 │         5 │     0 │     0 │
+│         6 │         6 │     0 │     0 │
+│         7 │         7 │     0 │     0 │
+│         8 │         8 │     0 │     0 │
+│         9 │         9 │     0 │     0 │
+└───────────┴───────────┴───────┴───────┘
+  10 rows                     4 columns
+
+Calculating SPRITE SCALE ONE python checksum
+Calculating SPRITE SCALE ONE list checksum
+checksum duckdb SPRITE SCALE ONE list 2542641
+checksum python 2542641
+SPRITE SCALE ONE list checksum phase passed
+SPRITE SCALE ONE list warmup time elapsed 1.312163615999907 seconds
+
+####################################################################################################
+Beginning benchmark for SPRITE SCALE ONE LIST
+Total time taken for 10000000 SPRITE SCALE ONE LIST acesses: 12.680375898999955 seconds
+Mean: 25.359803706001912 ms
+Median: 25.647517999800584 ms
+Standard deviation: 1.33 ms
+
+Calculating SPRITE SCALE ONE column based checksum
+checksum duckdb SPRITE SCALE ONE column based 2542641
+checksum python 2542641
+SPRITE SCALE ONE column based checksum phase passed
+SPRITE SCALE ONE column based warmup time elapsed 0.08452047300011145 seconds
+
+####################################################################################################
+Beginning benchmark for SPRITE SCALE ONE COLUMN BASED
+Total time taken for 10000000 SPRITE SCALE ONE COLUMN BASED acesses: 0.838400485999955 seconds
+Mean: 1.6759739040030581 ms
+Median: 1.6652059999842095 ms
+Standard deviation: 0.06 ms
+
+Calculating SPRITE SCALE ONE pixel based checksum
+checksum duckdb SPRITE SCALE ONE pixel based 2542641
+checksum python 2542641
+SPRITE SCALE ONE pixel based checksum phase passed
+SPRITE SCALE ONE pixel based warmup time elapsed 0.13302724100003616 seconds
+
+####################################################################################################
+Beginning benchmark for SPRITE SCALE ONE PIXEL BASED
+Total time taken for 10000000 SPRITE SCALE ONE PIXEL BASED acesses: 1.3517659180001829 seconds
+Mean: 2.7026826179994714 ms
+Median: 2.6799564999464565 ms
+Standard deviation: 0.12 ms
+
+Calculating SPRITE SCALE ONE BLOB based checksum
+checksum duckdb SPRITE SCALE ONE BLOB based 2542641
+checksum python 2542641
+SPRITE SCALE ONE BLOB based checksum phase passed
+SPRITE SCALE ONE BLOB based warmup time elapsed 0.14705473000003622 seconds
+
+####################################################################################################
+Beginning benchmark for SPRITE SCALE ONE BLOB BASED
+Total time taken for 10000000 SPRITE SCALE ONE BLOB BASED acesses: 1.4657950570001503 seconds
+Mean: 2.9307377179998184 ms
+Median: 2.8779015001418884 ms
+Standard deviation: 0.23 ms
+
+Creating SPRITE samples SCALE TWO (2.0)
+┌───────────┬───────────┬───────┬───────┐
+│ sample_id │ sprite_id │   u   │   v   │
+│   int32   │   int32   │ int32 │ int32 │
+├───────────┼───────────┼───────┼───────┤
+│         0 │         0 │     0 │     0 │
+│         1 │         1 │     0 │     0 │
+│         2 │         2 │     0 │     0 │
+│         3 │         3 │     0 │     0 │
+│         4 │         4 │     0 │     0 │
+│         5 │         5 │     0 │     0 │
+│         6 │         6 │     0 │     0 │
+│         7 │         7 │     0 │     0 │
+│         8 │         8 │     0 │     0 │
+│         9 │         9 │     0 │     0 │
+└───────────┴───────────┴───────┴───────┘
+  10 rows                     4 columns
+
+Calculating SPRITE SCALE TWO python checksum
+Calculating SPRITE SCALE TWO list checksum
+checksum duckdb SPRITE SCALE TWO list 2538575
+checksum python 2538575
+SPRITE SCALE TWO list checksum phase passed
+SPRITE SCALE TWO list warmup time elapsed 1.2232828559999689 seconds
+
+####################################################################################################
+Beginning benchmark for SPRITE SCALE TWO LIST
+Total time taken for 10000000 SPRITE SCALE TWO LIST acesses: 12.850304284999993 seconds
+Mean: 25.699492519999694 ms
+Median: 25.921335500129317 ms
+Standard deviation: 1.49 ms
+
+Calculating SPRITE SCALE TWO column based checksum
+checksum duckdb SPRITE SCALE TWO column based 2538575
+checksum python 2538575
+SPRITE SCALE TWO column based checksum phase passed
+SPRITE SCALE TWO column based warmup time elapsed 0.09268632200019056 seconds
+
+####################################################################################################
+Beginning benchmark for SPRITE SCALE TWO COLUMN BASED
+Total time taken for 10000000 SPRITE SCALE TWO COLUMN BASED acesses: 0.895651055999906 seconds
+Mean: 1.790413399996396 ms
+Median: 1.7949865000446152 ms
+Standard deviation: 0.08 ms
+
+Calculating SPRITE SCALE TWO pixel based checksum
+checksum duckdb SPRITE SCALE TWO pixel based 2538575
+checksum python 2538575
+SPRITE SCALE TWO pixel based checksum phase passed
+SPRITE SCALE TWO pixel based warmup time elapsed 0.13310506900006658 seconds
+
+####################################################################################################
+Beginning benchmark for SPRITE SCALE TWO PIXEL BASED
+Total time taken for 10000000 SPRITE SCALE TWO PIXEL BASED acesses: 1.3442773919998672 seconds
+Mean: 2.6877117740027643 ms
+Median: 2.672793000101592 ms
+Standard deviation: 0.08 ms
+
+Calculating SPRITE SCALE TWO BLOB based checksum
+checksum duckdb SPRITE SCALE TWO BLOB based 2538575
+checksum python 2538575
+SPRITE SCALE TWO BLOB based checksum phase passed
+SPRITE SCALE TWO BLOB based warmup time elapsed 0.1456332709999515 seconds
+
+####################################################################################################
+Beginning benchmark for SPRITE SCALE TWO BLOB BASED
+Total time taken for 10000000 SPRITE SCALE TWO BLOB BASED acesses: 1.4526040680000278 seconds
+Mean: 2.9044013480029207 ms
+Median: 2.8699390001065694 ms
+Standard deviation: 0.17 ms
+
+####################################################################################################
+Next access pattern SPRITE TRANSPARENCY
+Comparing dense pixels + mask against sparse visible pixel rows
+
+####################################################################################################
+Creating SPRITE TRANSPARENCY 100% opacity
+SPRITE TRANSPARENCY 100% total possible pixels: 204800
+SPRITE TRANSPARENCY 100% visible pixels stored sparsely: 204800
+Creating SPRITE TRANSPARENCY 100% dense BLOB + mask representation
+Creating SPRITE TRANSPARENCY 100% sparse pixel representation
+Creating sparse sprite 0/50 with 4096 visible pixels
+Creating sparse sprite 1/50 with 4096 visible pixels
+Creating sparse sprite 2/50 with 4096 visible pixels
+Creating sparse sprite 3/50 with 4096 visible pixels
+Creating sparse sprite 4/50 with 4096 visible pixels
+Creating sparse sprite 5/50 with 4096 visible pixels
+Creating sparse sprite 6/50 with 4096 visible pixels
+Creating sparse sprite 7/50 with 4096 visible pixels
+Creating sparse sprite 8/50 with 4096 visible pixels
+Creating sparse sprite 9/50 with 4096 visible pixels
+Creating sparse sprite 10/50 with 4096 visible pixels
+Creating sparse sprite 11/50 with 4096 visible pixels
+Creating sparse sprite 12/50 with 4096 visible pixels
+Creating sparse sprite 13/50 with 4096 visible pixels
+Creating sparse sprite 14/50 with 4096 visible pixels
+Creating sparse sprite 15/50 with 4096 visible pixels
+Creating sparse sprite 16/50 with 4096 visible pixels
+Creating sparse sprite 17/50 with 4096 visible pixels
+Creating sparse sprite 18/50 with 4096 visible pixels
+Creating sparse sprite 19/50 with 4096 visible pixels
+Creating sparse sprite 20/50 with 4096 visible pixels
+Creating sparse sprite 21/50 with 4096 visible pixels
+Creating sparse sprite 22/50 with 4096 visible pixels
+Creating sparse sprite 23/50 with 4096 visible pixels
+Creating sparse sprite 24/50 with 4096 visible pixels
+Creating sparse sprite 25/50 with 4096 visible pixels
+Creating sparse sprite 26/50 with 4096 visible pixels
+Creating sparse sprite 27/50 with 4096 visible pixels
+Creating sparse sprite 28/50 with 4096 visible pixels
+Creating sparse sprite 29/50 with 4096 visible pixels
+Creating sparse sprite 30/50 with 4096 visible pixels
+Creating sparse sprite 31/50 with 4096 visible pixels
+Creating sparse sprite 32/50 with 4096 visible pixels
+Creating sparse sprite 33/50 with 4096 visible pixels
+Creating sparse sprite 34/50 with 4096 visible pixels
+Creating sparse sprite 35/50 with 4096 visible pixels
+Creating sparse sprite 36/50 with 4096 visible pixels
+Creating sparse sprite 37/50 with 4096 visible pixels
+Creating sparse sprite 38/50 with 4096 visible pixels
+Creating sparse sprite 39/50 with 4096 visible pixels
+Creating sparse sprite 40/50 with 4096 visible pixels
+Creating sparse sprite 41/50 with 4096 visible pixels
+Creating sparse sprite 42/50 with 4096 visible pixels
+Creating sparse sprite 43/50 with 4096 visible pixels
+Creating sparse sprite 44/50 with 4096 visible pixels
+Creating sparse sprite 45/50 with 4096 visible pixels
+Creating sparse sprite 46/50 with 4096 visible pixels
+Creating sparse sprite 47/50 with 4096 visible pixels
+Creating sparse sprite 48/50 with 4096 visible pixels
+Creating sparse sprite 49/50 with 4096 visible pixels
+SPRITE TRANSPARENCY 100% sparse table row count: 204800
+
+####################################################################################################
+Calculating SPRITE TRANSPARENCY 100% SCALE HALF python checksum and visible count
+Calculating SPRITE TRANSPARENCY 100% SCALE HALF dense BLOB + mask checksum
+checksum duckdb SPRITE TRANSPARENCY 100% SCALE HALF dense BLOB + mask 2568443
+checksum python 2568443
+visible count duckdb SPRITE TRANSPARENCY 100% SCALE HALF dense BLOB + mask 20000
+visible count python 20000
+SPRITE TRANSPARENCY 100% SCALE HALF dense BLOB + mask checksum and visible count phase passed
+SPRITE TRANSPARENCY 100% SCALE HALF dense BLOB + mask warmup time elapsed 0.30727349699986917 seconds
+
+####################################################################################################
+Beginning benchmark for SPRITE TRANSPARENCY 100% SCALE HALF DENSE BLOB + MASK
+Total time taken for 10000000 SPRITE TRANSPARENCY 100% SCALE HALF DENSE BLOB + MASK acesses: 2.882042576999993 seconds
+Mean: 5.763078152007893 ms
+Median: 5.714577000048848 ms
+Standard deviation: 0.34 ms
+
+Calculating SPRITE TRANSPARENCY 100% SCALE HALF sparse pixel checksum
+checksum duckdb SPRITE TRANSPARENCY 100% SCALE HALF sparse pixel 2568443
+checksum python 2568443
+visible count duckdb SPRITE TRANSPARENCY 100% SCALE HALF sparse pixel 20000
+visible count python 20000
+SPRITE TRANSPARENCY 100% SCALE HALF sparse pixel checksum and visible count phase passed
+SPRITE TRANSPARENCY 100% SCALE HALF sparse pixel warmup time elapsed 0.15150023799992596 seconds
+
+####################################################################################################
+Beginning benchmark for SPRITE TRANSPARENCY 100% SCALE HALF SPARSE PIXEL
+Total time taken for 10000000 SPRITE TRANSPARENCY 100% SCALE HALF SPARSE PIXEL acesses: 1.520371847999968 seconds
+Mean: 3.0397681120039124 ms
+Median: 3.024444999937259 ms
+Standard deviation: 0.18 ms
+
+####################################################################################################
+Calculating SPRITE TRANSPARENCY 100% SCALE ONE python checksum and visible count
+Calculating SPRITE TRANSPARENCY 100% SCALE ONE dense BLOB + mask checksum
+checksum duckdb SPRITE TRANSPARENCY 100% SCALE ONE dense BLOB + mask 2542641
+checksum python 2542641
+visible count duckdb SPRITE TRANSPARENCY 100% SCALE ONE dense BLOB + mask 20000
+visible count python 20000
+SPRITE TRANSPARENCY 100% SCALE ONE dense BLOB + mask checksum and visible count phase passed
+SPRITE TRANSPARENCY 100% SCALE ONE dense BLOB + mask warmup time elapsed 0.30880836999995154 seconds
+
+####################################################################################################
+Beginning benchmark for SPRITE TRANSPARENCY 100% SCALE ONE DENSE BLOB + MASK
+Total time taken for 10000000 SPRITE TRANSPARENCY 100% SCALE ONE DENSE BLOB + MASK acesses: 2.6907508179999695 seconds
+Mean: 5.3806777080058055 ms
+Median: 5.285691500034773 ms
+Standard deviation: 0.29 ms
+
+Calculating SPRITE TRANSPARENCY 100% SCALE ONE sparse pixel checksum
+checksum duckdb SPRITE TRANSPARENCY 100% SCALE ONE sparse pixel 2542641
+checksum python 2542641
+visible count duckdb SPRITE TRANSPARENCY 100% SCALE ONE sparse pixel 20000
+visible count python 20000
+SPRITE TRANSPARENCY 100% SCALE ONE sparse pixel checksum and visible count phase passed
+SPRITE TRANSPARENCY 100% SCALE ONE sparse pixel warmup time elapsed 0.1361852039999576 seconds
+
+####################################################################################################
+Beginning benchmark for SPRITE TRANSPARENCY 100% SCALE ONE SPARSE PIXEL
+Total time taken for 10000000 SPRITE TRANSPARENCY 100% SCALE ONE SPARSE PIXEL acesses: 1.3652764090002165 seconds
+Mean: 2.7297043439989466 ms
+Median: 2.720821000025353 ms
+Standard deviation: 0.08 ms
+
+####################################################################################################
+Calculating SPRITE TRANSPARENCY 100% SCALE TWO python checksum and visible count
+Calculating SPRITE TRANSPARENCY 100% SCALE TWO dense BLOB + mask checksum
+checksum duckdb SPRITE TRANSPARENCY 100% SCALE TWO dense BLOB + mask 2538575
+checksum python 2538575
+visible count duckdb SPRITE TRANSPARENCY 100% SCALE TWO dense BLOB + mask 20000
+visible count python 20000
+SPRITE TRANSPARENCY 100% SCALE TWO dense BLOB + mask checksum and visible count phase passed
+SPRITE TRANSPARENCY 100% SCALE TWO dense BLOB + mask warmup time elapsed 0.2752986759999203 seconds
+
+####################################################################################################
+Beginning benchmark for SPRITE TRANSPARENCY 100% SCALE TWO DENSE BLOB + MASK
+Total time taken for 10000000 SPRITE TRANSPARENCY 100% SCALE TWO DENSE BLOB + MASK acesses: 2.7039272580000215 seconds
+Mean: 5.4068628820032245 ms
+Median: 5.315438500019809 ms
+Standard deviation: 0.45 ms
+
+Calculating SPRITE TRANSPARENCY 100% SCALE TWO sparse pixel checksum
+checksum duckdb SPRITE TRANSPARENCY 100% SCALE TWO sparse pixel 2538575
+checksum python 2538575
+visible count duckdb SPRITE TRANSPARENCY 100% SCALE TWO sparse pixel 20000
+visible count python 20000
+SPRITE TRANSPARENCY 100% SCALE TWO sparse pixel checksum and visible count phase passed
+SPRITE TRANSPARENCY 100% SCALE TWO sparse pixel warmup time elapsed 0.1479568009999639 seconds
+
+####################################################################################################
+Beginning benchmark for SPRITE TRANSPARENCY 100% SCALE TWO SPARSE PIXEL
+Total time taken for 10000000 SPRITE TRANSPARENCY 100% SCALE TWO SPARSE PIXEL acesses: 1.468373679000024 seconds
+Mean: 2.935832101998585 ms
+Median: 2.925912999899083 ms
+Standard deviation: 0.13 ms
+
+####################################################################################################
+Creating SPRITE TRANSPARENCY 75% opacity
+SPRITE TRANSPARENCY 75% total possible pixels: 204800
+SPRITE TRANSPARENCY 75% visible pixels stored sparsely: 153600
+Creating SPRITE TRANSPARENCY 75% dense BLOB + mask representation
+Creating SPRITE TRANSPARENCY 75% sparse pixel representation
+Creating sparse sprite 0/50 with 3072 visible pixels
+Creating sparse sprite 1/50 with 3072 visible pixels
+Creating sparse sprite 2/50 with 3072 visible pixels
+Creating sparse sprite 3/50 with 3072 visible pixels
+Creating sparse sprite 4/50 with 3072 visible pixels
+Creating sparse sprite 5/50 with 3072 visible pixels
+Creating sparse sprite 6/50 with 3072 visible pixels
+Creating sparse sprite 7/50 with 3072 visible pixels
+Creating sparse sprite 8/50 with 3072 visible pixels
+Creating sparse sprite 9/50 with 3072 visible pixels
+Creating sparse sprite 10/50 with 3072 visible pixels
+Creating sparse sprite 11/50 with 3072 visible pixels
+Creating sparse sprite 12/50 with 3072 visible pixels
+Creating sparse sprite 13/50 with 3072 visible pixels
+Creating sparse sprite 14/50 with 3072 visible pixels
+Creating sparse sprite 15/50 with 3072 visible pixels
+Creating sparse sprite 16/50 with 3072 visible pixels
+Creating sparse sprite 17/50 with 3072 visible pixels
+Creating sparse sprite 18/50 with 3072 visible pixels
+Creating sparse sprite 19/50 with 3072 visible pixels
+Creating sparse sprite 20/50 with 3072 visible pixels
+Creating sparse sprite 21/50 with 3072 visible pixels
+Creating sparse sprite 22/50 with 3072 visible pixels
+Creating sparse sprite 23/50 with 3072 visible pixels
+Creating sparse sprite 24/50 with 3072 visible pixels
+Creating sparse sprite 25/50 with 3072 visible pixels
+Creating sparse sprite 26/50 with 3072 visible pixels
+Creating sparse sprite 27/50 with 3072 visible pixels
+Creating sparse sprite 28/50 with 3072 visible pixels
+Creating sparse sprite 29/50 with 3072 visible pixels
+Creating sparse sprite 30/50 with 3072 visible pixels
+Creating sparse sprite 31/50 with 3072 visible pixels
+Creating sparse sprite 32/50 with 3072 visible pixels
+Creating sparse sprite 33/50 with 3072 visible pixels
+Creating sparse sprite 34/50 with 3072 visible pixels
+Creating sparse sprite 35/50 with 3072 visible pixels
+Creating sparse sprite 36/50 with 3072 visible pixels
+Creating sparse sprite 37/50 with 3072 visible pixels
+Creating sparse sprite 38/50 with 3072 visible pixels
+Creating sparse sprite 39/50 with 3072 visible pixels
+Creating sparse sprite 40/50 with 3072 visible pixels
+Creating sparse sprite 41/50 with 3072 visible pixels
+Creating sparse sprite 42/50 with 3072 visible pixels
+Creating sparse sprite 43/50 with 3072 visible pixels
+Creating sparse sprite 44/50 with 3072 visible pixels
+Creating sparse sprite 45/50 with 3072 visible pixels
+Creating sparse sprite 46/50 with 3072 visible pixels
+Creating sparse sprite 47/50 with 3072 visible pixels
+Creating sparse sprite 48/50 with 3072 visible pixels
+Creating sparse sprite 49/50 with 3072 visible pixels
+SPRITE TRANSPARENCY 75% sparse table row count: 153600
+
+####################################################################################################
+Calculating SPRITE TRANSPARENCY 75% SCALE HALF python checksum and visible count
+Calculating SPRITE TRANSPARENCY 75% SCALE HALF dense BLOB + mask checksum
+checksum duckdb SPRITE TRANSPARENCY 75% SCALE HALF dense BLOB + mask 1934674
+checksum python 1934674
+visible count duckdb SPRITE TRANSPARENCY 75% SCALE HALF dense BLOB + mask 15036
+visible count python 15036
+SPRITE TRANSPARENCY 75% SCALE HALF dense BLOB + mask checksum and visible count phase passed
+SPRITE TRANSPARENCY 75% SCALE HALF dense BLOB + mask warmup time elapsed 0.2903968220000479 seconds
+
+####################################################################################################
+Beginning benchmark for SPRITE TRANSPARENCY 75% SCALE HALF DENSE BLOB + MASK
+Total time taken for 10000000 SPRITE TRANSPARENCY 75% SCALE HALF DENSE BLOB + MASK acesses: 2.669187387999955 seconds
+Mean: 5.337359760006166 ms
+Median: 5.220435000069301 ms
+Standard deviation: 0.46 ms
+
+Calculating SPRITE TRANSPARENCY 75% SCALE HALF sparse pixel checksum
+checksum duckdb SPRITE TRANSPARENCY 75% SCALE HALF sparse pixel 1934674
+checksum python 1934674
+visible count duckdb SPRITE TRANSPARENCY 75% SCALE HALF sparse pixel 15036
+visible count python 15036
+SPRITE TRANSPARENCY 75% SCALE HALF sparse pixel checksum and visible count phase passed
+SPRITE TRANSPARENCY 75% SCALE HALF sparse pixel warmup time elapsed 0.1317500719999316 seconds
+
+####################################################################################################
+Beginning benchmark for SPRITE TRANSPARENCY 75% SCALE HALF SPARSE PIXEL
+Total time taken for 10000000 SPRITE TRANSPARENCY 75% SCALE HALF SPARSE PIXEL acesses: 1.3224091449999378 seconds
+Mean: 2.6438989380058047 ms
+Median: 2.633149499956744 ms
+Standard deviation: 0.09 ms
+
+####################################################################################################
+Calculating SPRITE TRANSPARENCY 75% SCALE ONE python checksum and visible count
+Calculating SPRITE TRANSPARENCY 75% SCALE ONE dense BLOB + mask checksum
+checksum duckdb SPRITE TRANSPARENCY 75% SCALE ONE dense BLOB + mask 1913521
+checksum python 1913521
+visible count duckdb SPRITE TRANSPARENCY 75% SCALE ONE dense BLOB + mask 15090
+visible count python 15090
+SPRITE TRANSPARENCY 75% SCALE ONE dense BLOB + mask checksum and visible count phase passed
+SPRITE TRANSPARENCY 75% SCALE ONE dense BLOB + mask warmup time elapsed 0.25666244700005336 seconds
+
+####################################################################################################
+Beginning benchmark for SPRITE TRANSPARENCY 75% SCALE ONE DENSE BLOB + MASK
+Total time taken for 10000000 SPRITE TRANSPARENCY 75% SCALE ONE DENSE BLOB + MASK acesses: 2.6528660219998983 seconds
+Mean: 5.304676509997535 ms
+Median: 5.215846000055535 ms
+Standard deviation: 0.43 ms
+
+Calculating SPRITE TRANSPARENCY 75% SCALE ONE sparse pixel checksum
+checksum duckdb SPRITE TRANSPARENCY 75% SCALE ONE sparse pixel 1913521
+checksum python 1913521
+visible count duckdb SPRITE TRANSPARENCY 75% SCALE ONE sparse pixel 15090
+visible count python 15090
+SPRITE TRANSPARENCY 75% SCALE ONE sparse pixel checksum and visible count phase passed
+SPRITE TRANSPARENCY 75% SCALE ONE sparse pixel warmup time elapsed 0.1314182600001459 seconds
+
+####################################################################################################
+Beginning benchmark for SPRITE TRANSPARENCY 75% SCALE ONE SPARSE PIXEL
+Total time taken for 10000000 SPRITE TRANSPARENCY 75% SCALE ONE SPARSE PIXEL acesses: 1.3244214549999924 seconds
+Mean: 2.6480143740041058 ms
+Median: 2.635963500097205 ms
+Standard deviation: 0.07 ms
+
+####################################################################################################
+Calculating SPRITE TRANSPARENCY 75% SCALE TWO python checksum and visible count
+Calculating SPRITE TRANSPARENCY 75% SCALE TWO dense BLOB + mask checksum
+checksum duckdb SPRITE TRANSPARENCY 75% SCALE TWO dense BLOB + mask 1913125
+checksum python 1913125
+visible count duckdb SPRITE TRANSPARENCY 75% SCALE TWO dense BLOB + mask 15076
+visible count python 15076
+SPRITE TRANSPARENCY 75% SCALE TWO dense BLOB + mask checksum and visible count phase passed
+SPRITE TRANSPARENCY 75% SCALE TWO dense BLOB + mask warmup time elapsed 0.2678185190000022 seconds
+
+####################################################################################################
+Beginning benchmark for SPRITE TRANSPARENCY 75% SCALE TWO DENSE BLOB + MASK
+Total time taken for 10000000 SPRITE TRANSPARENCY 75% SCALE TWO DENSE BLOB + MASK acesses: 2.6381964629999857 seconds
+Mean: 5.275344183995003 ms
+Median: 5.2354769999283235 ms
+Standard deviation: 0.17 ms
+
+Calculating SPRITE TRANSPARENCY 75% SCALE TWO sparse pixel checksum
+checksum duckdb SPRITE TRANSPARENCY 75% SCALE TWO sparse pixel 1913125
+checksum python 1913125
+visible count duckdb SPRITE TRANSPARENCY 75% SCALE TWO sparse pixel 15076
+visible count python 15076
+SPRITE TRANSPARENCY 75% SCALE TWO sparse pixel checksum and visible count phase passed
+SPRITE TRANSPARENCY 75% SCALE TWO sparse pixel warmup time elapsed 0.13090591899981519 seconds
+
+####################################################################################################
+Beginning benchmark for SPRITE TRANSPARENCY 75% SCALE TWO SPARSE PIXEL
+Total time taken for 10000000 SPRITE TRANSPARENCY 75% SCALE TWO SPARSE PIXEL acesses: 1.312473444999796 seconds
+Mean: 2.623983988004511 ms
+Median: 2.6127995000706505 ms
+Standard deviation: 0.08 ms
+
+####################################################################################################
+Creating SPRITE TRANSPARENCY 50% opacity
+SPRITE TRANSPARENCY 50% total possible pixels: 204800
+SPRITE TRANSPARENCY 50% visible pixels stored sparsely: 102400
+Creating SPRITE TRANSPARENCY 50% dense BLOB + mask representation
+Creating SPRITE TRANSPARENCY 50% sparse pixel representation
+Creating sparse sprite 0/50 with 2048 visible pixels
+Creating sparse sprite 1/50 with 2048 visible pixels
+Creating sparse sprite 2/50 with 2048 visible pixels
+Creating sparse sprite 3/50 with 2048 visible pixels
+Creating sparse sprite 4/50 with 2048 visible pixels
+Creating sparse sprite 5/50 with 2048 visible pixels
+Creating sparse sprite 6/50 with 2048 visible pixels
+Creating sparse sprite 7/50 with 2048 visible pixels
+Creating sparse sprite 8/50 with 2048 visible pixels
+Creating sparse sprite 9/50 with 2048 visible pixels
+Creating sparse sprite 10/50 with 2048 visible pixels
+Creating sparse sprite 11/50 with 2048 visible pixels
+Creating sparse sprite 12/50 with 2048 visible pixels
+Creating sparse sprite 13/50 with 2048 visible pixels
+Creating sparse sprite 14/50 with 2048 visible pixels
+Creating sparse sprite 15/50 with 2048 visible pixels
+Creating sparse sprite 16/50 with 2048 visible pixels
+Creating sparse sprite 17/50 with 2048 visible pixels
+Creating sparse sprite 18/50 with 2048 visible pixels
+Creating sparse sprite 19/50 with 2048 visible pixels
+Creating sparse sprite 20/50 with 2048 visible pixels
+Creating sparse sprite 21/50 with 2048 visible pixels
+Creating sparse sprite 22/50 with 2048 visible pixels
+Creating sparse sprite 23/50 with 2048 visible pixels
+Creating sparse sprite 24/50 with 2048 visible pixels
+Creating sparse sprite 25/50 with 2048 visible pixels
+Creating sparse sprite 26/50 with 2048 visible pixels
+Creating sparse sprite 27/50 with 2048 visible pixels
+Creating sparse sprite 28/50 with 2048 visible pixels
+Creating sparse sprite 29/50 with 2048 visible pixels
+Creating sparse sprite 30/50 with 2048 visible pixels
+Creating sparse sprite 31/50 with 2048 visible pixels
+Creating sparse sprite 32/50 with 2048 visible pixels
+Creating sparse sprite 33/50 with 2048 visible pixels
+Creating sparse sprite 34/50 with 2048 visible pixels
+Creating sparse sprite 35/50 with 2048 visible pixels
+Creating sparse sprite 36/50 with 2048 visible pixels
+Creating sparse sprite 37/50 with 2048 visible pixels
+Creating sparse sprite 38/50 with 2048 visible pixels
+Creating sparse sprite 39/50 with 2048 visible pixels
+Creating sparse sprite 40/50 with 2048 visible pixels
+Creating sparse sprite 41/50 with 2048 visible pixels
+Creating sparse sprite 42/50 with 2048 visible pixels
+Creating sparse sprite 43/50 with 2048 visible pixels
+Creating sparse sprite 44/50 with 2048 visible pixels
+Creating sparse sprite 45/50 with 2048 visible pixels
+Creating sparse sprite 46/50 with 2048 visible pixels
+Creating sparse sprite 47/50 with 2048 visible pixels
+Creating sparse sprite 48/50 with 2048 visible pixels
+Creating sparse sprite 49/50 with 2048 visible pixels
+SPRITE TRANSPARENCY 50% sparse table row count: 102400
+
+####################################################################################################
+Calculating SPRITE TRANSPARENCY 50% SCALE HALF python checksum and visible count
+Calculating SPRITE TRANSPARENCY 50% SCALE HALF dense BLOB + mask checksum
+checksum duckdb SPRITE TRANSPARENCY 50% SCALE HALF dense BLOB + mask 1278202
+checksum python 1278202
+visible count duckdb SPRITE TRANSPARENCY 50% SCALE HALF dense BLOB + mask 9920
+visible count python 9920
+SPRITE TRANSPARENCY 50% SCALE HALF dense BLOB + mask checksum and visible count phase passed
+SPRITE TRANSPARENCY 50% SCALE HALF dense BLOB + mask warmup time elapsed 0.2355911610000021 seconds
+
+####################################################################################################
+Beginning benchmark for SPRITE TRANSPARENCY 50% SCALE HALF DENSE BLOB + MASK
+Total time taken for 10000000 SPRITE TRANSPARENCY 50% SCALE HALF DENSE BLOB + MASK acesses: 2.337788052000178 seconds
+Mean: 4.674545665999631 ms
+Median: 4.616426999973555 ms
+Standard deviation: 0.22 ms
+
+Calculating SPRITE TRANSPARENCY 50% SCALE HALF sparse pixel checksum
+checksum duckdb SPRITE TRANSPARENCY 50% SCALE HALF sparse pixel 1278202
+checksum python 1278202
+visible count duckdb SPRITE TRANSPARENCY 50% SCALE HALF sparse pixel 9920
+visible count python 9920
+SPRITE TRANSPARENCY 50% SCALE HALF sparse pixel checksum and visible count phase passed
+SPRITE TRANSPARENCY 50% SCALE HALF sparse pixel warmup time elapsed 0.11412547100007941 seconds
+
+####################################################################################################
+Beginning benchmark for SPRITE TRANSPARENCY 50% SCALE HALF SPARSE PIXEL
+Total time taken for 10000000 SPRITE TRANSPARENCY 50% SCALE HALF SPARSE PIXEL acesses: 1.150179461999869 seconds
+Mean: 2.2994178959997953 ms
+Median: 2.2881169999209305 ms
+Standard deviation: 0.08 ms
+
+####################################################################################################
+Calculating SPRITE TRANSPARENCY 50% SCALE ONE python checksum and visible count
+Calculating SPRITE TRANSPARENCY 50% SCALE ONE dense BLOB + mask checksum
+checksum duckdb SPRITE TRANSPARENCY 50% SCALE ONE dense BLOB + mask 1261148
+checksum python 1261148
+visible count duckdb SPRITE TRANSPARENCY 50% SCALE ONE dense BLOB + mask 9928
+visible count python 9928
+SPRITE TRANSPARENCY 50% SCALE ONE dense BLOB + mask checksum and visible count phase passed
+SPRITE TRANSPARENCY 50% SCALE ONE dense BLOB + mask warmup time elapsed 0.23734719300000506 seconds
+
+####################################################################################################
+Beginning benchmark for SPRITE TRANSPARENCY 50% SCALE ONE DENSE BLOB + MASK
+Total time taken for 10000000 SPRITE TRANSPARENCY 50% SCALE ONE DENSE BLOB + MASK acesses: 2.3316880870002024 seconds
+Mean: 4.6624279419911545 ms
+Median: 4.462891499997568 ms
+Standard deviation: 0.59 ms
+
+Calculating SPRITE TRANSPARENCY 50% SCALE ONE sparse pixel checksum
+checksum duckdb SPRITE TRANSPARENCY 50% SCALE ONE sparse pixel 1261148
+checksum python 1261148
+visible count duckdb SPRITE TRANSPARENCY 50% SCALE ONE sparse pixel 9928
+visible count python 9928
+SPRITE TRANSPARENCY 50% SCALE ONE sparse pixel checksum and visible count phase passed
+SPRITE TRANSPARENCY 50% SCALE ONE sparse pixel warmup time elapsed 0.10949955099999897 seconds
+
+####################################################################################################
+Beginning benchmark for SPRITE TRANSPARENCY 50% SCALE ONE SPARSE PIXEL
+Total time taken for 10000000 SPRITE TRANSPARENCY 50% SCALE ONE SPARSE PIXEL acesses: 1.0985997810000754 seconds
+Mean: 2.1963041680041897 ms
+Median: 2.1846695000249383 ms
+Standard deviation: 0.07 ms
+
+####################################################################################################
+Calculating SPRITE TRANSPARENCY 50% SCALE TWO python checksum and visible count
+Calculating SPRITE TRANSPARENCY 50% SCALE TWO dense BLOB + mask checksum
+checksum duckdb SPRITE TRANSPARENCY 50% SCALE TWO dense BLOB + mask 1265755
+checksum python 1265755
+visible count duckdb SPRITE TRANSPARENCY 50% SCALE TWO dense BLOB + mask 9960
+visible count python 9960
+SPRITE TRANSPARENCY 50% SCALE TWO dense BLOB + mask checksum and visible count phase passed
+SPRITE TRANSPARENCY 50% SCALE TWO dense BLOB + mask warmup time elapsed 0.22232955899994522 seconds
+
+####################################################################################################
+Beginning benchmark for SPRITE TRANSPARENCY 50% SCALE TWO DENSE BLOB + MASK
+Total time taken for 10000000 SPRITE TRANSPARENCY 50% SCALE TWO DENSE BLOB + MASK acesses: 2.33370320500012 seconds
+Mean: 4.666425491998325 ms
+Median: 4.681710999875577 ms
+Standard deviation: 0.36 ms
+
+Calculating SPRITE TRANSPARENCY 50% SCALE TWO sparse pixel checksum
+checksum duckdb SPRITE TRANSPARENCY 50% SCALE TWO sparse pixel 1265755
+checksum python 1265755
+visible count duckdb SPRITE TRANSPARENCY 50% SCALE TWO sparse pixel 9960
+visible count python 9960
+SPRITE TRANSPARENCY 50% SCALE TWO sparse pixel checksum and visible count phase passed
+SPRITE TRANSPARENCY 50% SCALE TWO sparse pixel warmup time elapsed 0.1192697720000524 seconds
+
+####################################################################################################
+Beginning benchmark for SPRITE TRANSPARENCY 50% SCALE TWO SPARSE PIXEL
+Total time taken for 10000000 SPRITE TRANSPARENCY 50% SCALE TWO SPARSE PIXEL acesses: 1.1752356529998451 seconds
+Mean: 2.349480109995966 ms
+Median: 2.339134499948159 ms
+Standard deviation: 0.08 ms
+
+####################################################################################################
+Creating SPRITE TRANSPARENCY 25% opacity
+SPRITE TRANSPARENCY 25% total possible pixels: 204800
+SPRITE TRANSPARENCY 25% visible pixels stored sparsely: 51200
+Creating SPRITE TRANSPARENCY 25% dense BLOB + mask representation
+Creating SPRITE TRANSPARENCY 25% sparse pixel representation
+Creating sparse sprite 0/50 with 1024 visible pixels
+Creating sparse sprite 1/50 with 1024 visible pixels
+Creating sparse sprite 2/50 with 1024 visible pixels
+Creating sparse sprite 3/50 with 1024 visible pixels
+Creating sparse sprite 4/50 with 1024 visible pixels
+Creating sparse sprite 5/50 with 1024 visible pixels
+Creating sparse sprite 6/50 with 1024 visible pixels
+Creating sparse sprite 7/50 with 1024 visible pixels
+Creating sparse sprite 8/50 with 1024 visible pixels
+Creating sparse sprite 9/50 with 1024 visible pixels
+Creating sparse sprite 10/50 with 1024 visible pixels
+Creating sparse sprite 11/50 with 1024 visible pixels
+Creating sparse sprite 12/50 with 1024 visible pixels
+Creating sparse sprite 13/50 with 1024 visible pixels
+Creating sparse sprite 14/50 with 1024 visible pixels
+Creating sparse sprite 15/50 with 1024 visible pixels
+Creating sparse sprite 16/50 with 1024 visible pixels
+Creating sparse sprite 17/50 with 1024 visible pixels
+Creating sparse sprite 18/50 with 1024 visible pixels
+Creating sparse sprite 19/50 with 1024 visible pixels
+Creating sparse sprite 20/50 with 1024 visible pixels
+Creating sparse sprite 21/50 with 1024 visible pixels
+Creating sparse sprite 22/50 with 1024 visible pixels
+Creating sparse sprite 23/50 with 1024 visible pixels
+Creating sparse sprite 24/50 with 1024 visible pixels
+Creating sparse sprite 25/50 with 1024 visible pixels
+Creating sparse sprite 26/50 with 1024 visible pixels
+Creating sparse sprite 27/50 with 1024 visible pixels
+Creating sparse sprite 28/50 with 1024 visible pixels
+Creating sparse sprite 29/50 with 1024 visible pixels
+Creating sparse sprite 30/50 with 1024 visible pixels
+Creating sparse sprite 31/50 with 1024 visible pixels
+Creating sparse sprite 32/50 with 1024 visible pixels
+Creating sparse sprite 33/50 with 1024 visible pixels
+Creating sparse sprite 34/50 with 1024 visible pixels
+Creating sparse sprite 35/50 with 1024 visible pixels
+Creating sparse sprite 36/50 with 1024 visible pixels
+Creating sparse sprite 37/50 with 1024 visible pixels
+Creating sparse sprite 38/50 with 1024 visible pixels
+Creating sparse sprite 39/50 with 1024 visible pixels
+Creating sparse sprite 40/50 with 1024 visible pixels
+Creating sparse sprite 41/50 with 1024 visible pixels
+Creating sparse sprite 42/50 with 1024 visible pixels
+Creating sparse sprite 43/50 with 1024 visible pixels
+Creating sparse sprite 44/50 with 1024 visible pixels
+Creating sparse sprite 45/50 with 1024 visible pixels
+Creating sparse sprite 46/50 with 1024 visible pixels
+Creating sparse sprite 47/50 with 1024 visible pixels
+Creating sparse sprite 48/50 with 1024 visible pixels
+Creating sparse sprite 49/50 with 1024 visible pixels
+SPRITE TRANSPARENCY 25% sparse table row count: 51200
+
+####################################################################################################
+Calculating SPRITE TRANSPARENCY 25% SCALE HALF python checksum and visible count
+Calculating SPRITE TRANSPARENCY 25% SCALE HALF dense BLOB + mask checksum
+checksum duckdb SPRITE TRANSPARENCY 25% SCALE HALF dense BLOB + mask 627012
+checksum python 627012
+visible count duckdb SPRITE TRANSPARENCY 25% SCALE HALF dense BLOB + mask 4916
+visible count python 4916
+SPRITE TRANSPARENCY 25% SCALE HALF dense BLOB + mask checksum and visible count phase passed
+SPRITE TRANSPARENCY 25% SCALE HALF dense BLOB + mask warmup time elapsed 0.204783321999912 seconds
+
+####################################################################################################
+Beginning benchmark for SPRITE TRANSPARENCY 25% SCALE HALF DENSE BLOB + MASK
+Total time taken for 10000000 SPRITE TRANSPARENCY 25% SCALE HALF DENSE BLOB + MASK acesses: 2.1190612769999007 seconds
+Mean: 4.237095573998886 ms
+Median: 4.186005000065052 ms
+Standard deviation: 0.38 ms
+
+Calculating SPRITE TRANSPARENCY 25% SCALE HALF sparse pixel checksum
+checksum duckdb SPRITE TRANSPARENCY 25% SCALE HALF sparse pixel 627012
+checksum python 627012
+visible count duckdb SPRITE TRANSPARENCY 25% SCALE HALF sparse pixel 4916
+visible count python 4916
+SPRITE TRANSPARENCY 25% SCALE HALF sparse pixel checksum and visible count phase passed
+SPRITE TRANSPARENCY 25% SCALE HALF sparse pixel warmup time elapsed 0.08433441600004699 seconds
+
+####################################################################################################
+Beginning benchmark for SPRITE TRANSPARENCY 25% SCALE HALF SPARSE PIXEL
+Total time taken for 10000000 SPRITE TRANSPARENCY 25% SCALE HALF SPARSE PIXEL acesses: 0.8257012799999757 seconds
+Mean: 1.650553428013609 ms
+Median: 1.6344734999620414 ms
+Standard deviation: 0.14 ms
+
+####################################################################################################
+Calculating SPRITE TRANSPARENCY 25% SCALE ONE python checksum and visible count
+Calculating SPRITE TRANSPARENCY 25% SCALE ONE dense BLOB + mask checksum
+checksum duckdb SPRITE TRANSPARENCY 25% SCALE ONE dense BLOB + mask 626931
+checksum python 626931
+visible count duckdb SPRITE TRANSPARENCY 25% SCALE ONE dense BLOB + mask 4968
+visible count python 4968
+SPRITE TRANSPARENCY 25% SCALE ONE dense BLOB + mask checksum and visible count phase passed
+SPRITE TRANSPARENCY 25% SCALE ONE dense BLOB + mask warmup time elapsed 0.21157998600006067 seconds
+
+####################################################################################################
+Beginning benchmark for SPRITE TRANSPARENCY 25% SCALE ONE DENSE BLOB + MASK
+Total time taken for 10000000 SPRITE TRANSPARENCY 25% SCALE ONE DENSE BLOB + MASK acesses: 2.094895686999962 seconds
+Mean: 4.188745757998731 ms
+Median: 4.1253424999467825 ms
+Standard deviation: 0.25 ms
+
+Calculating SPRITE TRANSPARENCY 25% SCALE ONE sparse pixel checksum
+checksum duckdb SPRITE TRANSPARENCY 25% SCALE ONE sparse pixel 626931
+checksum python 626931
+visible count duckdb SPRITE TRANSPARENCY 25% SCALE ONE sparse pixel 4968
+visible count python 4968
+SPRITE TRANSPARENCY 25% SCALE ONE sparse pixel checksum and visible count phase passed
+SPRITE TRANSPARENCY 25% SCALE ONE sparse pixel warmup time elapsed 0.08047687299995232 seconds
+
+####################################################################################################
+Beginning benchmark for SPRITE TRANSPARENCY 25% SCALE ONE SPARSE PIXEL
+Total time taken for 10000000 SPRITE TRANSPARENCY 25% SCALE ONE SPARSE PIXEL acesses: 0.7939955889999055 seconds
+Mean: 1.5870649159933237 ms
+Median: 1.5784710000161795 ms
+Standard deviation: 0.07 ms
+
+####################################################################################################
+Calculating SPRITE TRANSPARENCY 25% SCALE TWO python checksum and visible count
+Calculating SPRITE TRANSPARENCY 25% SCALE TWO dense BLOB + mask checksum
+checksum duckdb SPRITE TRANSPARENCY 25% SCALE TWO dense BLOB + mask 630965
+checksum python 630965
+visible count duckdb SPRITE TRANSPARENCY 25% SCALE TWO dense BLOB + mask 4992
+visible count python 4992
+SPRITE TRANSPARENCY 25% SCALE TWO dense BLOB + mask checksum and visible count phase passed
+SPRITE TRANSPARENCY 25% SCALE TWO dense BLOB + mask warmup time elapsed 0.20853410099994107 seconds
+
+####################################################################################################
+Beginning benchmark for SPRITE TRANSPARENCY 25% SCALE TWO DENSE BLOB + MASK
+Total time taken for 10000000 SPRITE TRANSPARENCY 25% SCALE TWO DENSE BLOB + MASK acesses: 2.1682584860000134 seconds
+Mean: 4.335431392004011 ms
+Median: 4.258287000084238 ms
+Standard deviation: 0.30 ms
+
+Calculating SPRITE TRANSPARENCY 25% SCALE TWO sparse pixel checksum
+checksum duckdb SPRITE TRANSPARENCY 25% SCALE TWO sparse pixel 630965
+checksum python 630965
+visible count duckdb SPRITE TRANSPARENCY 25% SCALE TWO sparse pixel 4992
+visible count python 4992
+SPRITE TRANSPARENCY 25% SCALE TWO sparse pixel checksum and visible count phase passed
+SPRITE TRANSPARENCY 25% SCALE TWO sparse pixel warmup time elapsed 0.08201180699984434 seconds
+
+####################################################################################################
+Beginning benchmark for SPRITE TRANSPARENCY 25% SCALE TWO SPARSE PIXEL
+Total time taken for 10000000 SPRITE TRANSPARENCY 25% SCALE TWO SPARSE PIXEL acesses: 0.8115282809999371 seconds
+Mean: 1.6220734180028558 ms
+Median: 1.6142084999728468 ms
+Standard deviation: 0.07 ms

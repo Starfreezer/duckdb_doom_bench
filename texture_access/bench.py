@@ -54,7 +54,6 @@ def sample_coordinates_wall(i: int):
 def main():
     print(f"DuckDB version: {duckdb.__version__}")
 
-    # Keep the benchmark deterministic and single-threaded initially.
     con = duckdb.connect(
         ":memory:",
         config={"threads": 1},
