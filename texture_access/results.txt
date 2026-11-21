@@ -1,0 +1,618 @@
+DuckDB version: 2.0.0
+Creating texture lists
+Inserting textures
+Sampling textures
+Calculating sql checksum
+Calculating python checksum
+checksum duckdb 2549839
+checksum python 2549839
+Checksum phase passed
+Warmup time elapsed 0.2401749729997391 seconds
+
+Beginning benchmark for wall like acesses
+Total time taken for 1000000 wall like acesses: 2.408242801999222 seconds
+Mean: 48.16372208017128 ms
+Median: 47.954626999853645 ms
+Standard deviation: 0.69 ms
+
+Beginn benchmark for wall like acesses SCAN ONLY
+Total time taken for 1000000 wall like acesses SCAN ONLY: 0.01943185900017852 seconds
+Mean: 0.3880112400293001 ms
+Median: 0.36681450001196936 ms
+Standard deviation: 0.04 ms
+
+Begin Benchmark for wall like acesses JOINS only
+Total time taken for 1000000 wall like acesses JOIN ONLY: 0.03948674899947946 seconds
+Mean: 0.7890675600719987 ms
+Median: 0.760357500439568 ms
+Standard deviation: 0.17 ms
+
+Creating column major texture lists
+Inserting column major textures
+Calculating column major sql checksum
+checksum duckdb column major 2549839
+checksum python 2549839
+Column major checksum phase passed
+Column major warmup time elapsed 0.23953959099890199 seconds
+
+Beginning benchmark for wall like acesses COLUMN MAJOR
+Total time taken for 1000000 wall like acesses COLUMN MAJOR: 2.444410236001204 seconds
+Mean: 48.88738630001171 ms
+Median: 48.77860249962396 ms
+Standard deviation: 0.70 ms
+
+        Result: List lookup for textures is very expensive in duckdb and does not compete with cedar_dbs byte reader
+    
+
+Moving to one list per texture column
+Creating texture column lists from original textures
+┌────────────┬───────┬─────────────────────────────────────────────────────────────────────────────────────────────────┐
+│ texture_id │  col  │                                               row                                               │
+│   int32    │ int32 │                                             uint8[]                                             │
+├────────────┼───────┼─────────────────────────────────────────────────────────────────────────────────────────────────┤
+│          0 │     0 │ [197, 16, 223, 228, 188, 183, 213, 190, 66, 221, 70, 199, 154, 60, 176, 45, 131, 5, 161, 165, 2 │
+│            │       │ 14, 194, 59, 101, 237, 12, 200, 214, 65, 143, 252, 233, 234, 79, 20, 161, 138, 205, 184, 38, 55 │
+│            │       │ , 52, 6, 90, 58, 17, 94, 157, 254, 217, 196, 49, 153, 199, 89, 92, 137, 206, 115, 205, 6, 77, 2 │
+│            │       │ 09, 133, 56, 27, 60, 99, 85, 128, 110, 174, 128, 29, 106, 233, 32, 179, 251, 41, 234, 24, 155,… │
+├────────────┼───────┼─────────────────────────────────────────────────────────────────────────────────────────────────┤
+│          0 │     1 │ [215, 133, 92, 249, 47, 58, 246, 97, 14, 89, 80, 112, 159, 183, 83, 183, 96, 128, 36, 233, 223, │
+│            │       │  21, 185, 3, 236, 72, 24, 184, 248, 115, 52, 26, 81, 72, 187, 10, 41, 62, 98, 72, 15, 147, 101, │
+│            │       │  16, 242, 215, 50, 66, 79, 154, 188, 192, 168, 210, 112, 213, 167, 132, 254, 228, 235, 95, 48,  │
+│            │       │ 203, 53, 239, 7, 52, 4, 180, 21, 233, 74, 54, 93, 243, 189, 230, 124, 172, 213, 219, 105, 138,… │
+├────────────┼───────┼─────────────────────────────────────────────────────────────────────────────────────────────────┤
+│          0 │     2 │ [20, 243, 31, 0, 173, 32, 198, 233, 106, 126, 63, 100, 196, 117, 156, 149, 35, 103, 98, 253, 17 │
+│            │       │ 0, 149, 246, 16, 112, 69, 173, 159, 17, 129, 64, 99, 55, 68, 92, 22, 142, 238, 102, 231, 223, 3 │
+│            │       │ 1, 104, 117, 228, 138, 78, 71, 49, 234, 214, 250, 152, 40, 55, 131, 52, 174, 130, 244, 128, 208 │
+│            │       │ , 26, 123, 98, 244, 50, 124, 204, 181, 201, 98, 224, 216, 98, 160, 203, 246, 124, 212, 161, 17… │
+├────────────┼───────┼─────────────────────────────────────────────────────────────────────────────────────────────────┤
+│          0 │     3 │ [132, 35, 239, 19, 18, 14, 119, 182, 185, 232, 61, 224, 130, 144, 8, 77, 217, 203, 233, 243, 12 │
+│            │       │ 6, 220, 162, 207, 204, 194, 96, 42, 114, 160, 44, 131, 132, 58, 174, 98, 112, 85, 151, 30, 158, │
+│            │       │  125, 34, 91, 86, 81, 128, 74, 227, 28, 107, 64, 79, 39, 15, 6, 71, 112, 159, 157, 108, 199, 19 │
+│            │       │ 8, 236, 108, 120, 17, 209, 181, 130, 192, 250, 81, 119, 24, 6, 76, 212, 138, 156, 220, 76, 55,… │
+├────────────┼───────┼─────────────────────────────────────────────────────────────────────────────────────────────────┤
+│          0 │     4 │ [248, 45, 20, 253, 21, 231, 10, 38, 171, 174, 195, 104, 246, 113, 182, 234, 142, 197, 122, 41,  │
+│            │       │ 70, 17, 55, 251, 159, 106, 167, 11, 177, 250, 5, 234, 207, 170, 137, 100, 2, 16, 217, 177, 165, │
+│            │       │  56, 251, 5, 52, 134, 90, 32, 162, 71, 200, 171, 250, 127, 20, 187, 237, 174, 191, 169, 90, 9,  │
+│            │       │ 148, 103, 165, 217, 108, 83, 46, 5, 142, 214, 111, 135, 172, 191, 210, 90, 176, 109, 219, 108,… │
+└────────────┴───────┴─────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+Calculating texture column based sql checksum
+checksum duckdb texture column based 2549839
+checksum python 2549839
+Texture column based checksum phase passed
+Texture column based warmup time elapsed 0.009681249001005199 seconds
+
+Beginning benchmark for wall like acesses TEXTURE COLUMN BASED
+Total time taken for 1000000 wall like acesses TEXTURE COLUMN BASED: 0.09479429299972253 seconds
+Mean: 1.895179400089546 ms
+Median: 1.8913245003204793 ms
+Standard deviation: 0.03 ms
+
+Moving to one row per texture pixel
+Creating texture pixel rows from original textures
+Creating tex 0/20 with 8192 pixels
+Creating tex 1/20 with 8192 pixels
+Creating tex 2/20 with 8192 pixels
+Creating tex 3/20 with 8192 pixels
+Creating tex 4/20 with 8192 pixels
+Creating tex 5/20 with 8192 pixels
+Creating tex 6/20 with 8192 pixels
+Creating tex 7/20 with 8192 pixels
+Creating tex 8/20 with 8192 pixels
+Creating tex 9/20 with 8192 pixels
+Creating tex 10/20 with 8192 pixels
+Creating tex 11/20 with 8192 pixels
+Creating tex 12/20 with 8192 pixels
+Creating tex 13/20 with 8192 pixels
+Creating tex 14/20 with 8192 pixels
+Creating tex 15/20 with 8192 pixels
+Creating tex 16/20 with 8192 pixels
+Creating tex 17/20 with 8192 pixels
+Creating tex 18/20 with 8192 pixels
+Creating tex 19/20 with 8192 pixels
+┌────────────┬───────┬───────┬───────────────┐
+│ texture_id │   u   │   v   │ palette_index │
+│   int32    │ int32 │ int32 │     uint8     │
+├────────────┼───────┼───────┼───────────────┤
+│          0 │     0 │     0 │           197 │
+│          0 │     1 │     0 │           215 │
+│          0 │     2 │     0 │            20 │
+│          0 │     3 │     0 │           132 │
+│          0 │     4 │     0 │           248 │
+└────────────┴───────┴───────┴───────────────┘
+
+Calculating texture pixel based sql checksum
+checksum duckdb texture pixel based 2549839
+checksum python 2549839
+Texture pixel based checksum phase passed
+Texture pixel based warmup time elapsed 0.007389757000055397 seconds
+
+Beginning benchmark for wall like acesses TEXTURE PIXEL BASED
+Total time taken for 1000000 wall like acesses TEXTURE PIXEL BASED: 0.0711536229991907 seconds
+Mean: 1.4223810000839876 ms
+Median: 1.422462500158872 ms
+Standard deviation: 0.07 ms
+
+Moving to texture stored as BLOB
+Creating BLOB textures from original textures
+Calculating BLOB based sql checksum
+checksum duckdb BLOB based 2549839
+checksum python 2549839
+BLOB based checksum phase passed
+BLOB based warmup time elapsed 0.024173111998607055 seconds
+
+Beginning benchmark for wall like acesses BLOB BASED
+Total time taken for 1000000 wall like acesses BLOB BASED: 0.1721690859994851 seconds
+Mean: 3.442673039935471 ms
+Median: 3.4443179993104422 ms
+Standard deviation: 0.08 ms
+
+Testing texture table size with identical wall like sample accesses
+
+Creating texture column based table with 3 textures
+Creating tex 0/3
+Creating tex 1/3
+Creating tex 2/3
+Warmup time for 3 textures: 0.009869408999293228 seconds
+Texture count: 3
+Mean: 1.948785740059975 ms
+Median: 1.9493825002427911 ms
+Standard deviation: 0.04 ms
+
+EXPLAIN ANALYZE for 3 textures
+╭─ Summary ───────────╮
+│ Total Time: 0.0016s │
+╰─────────────────────╯
+╭─ Ungrouped Aggregate ────────────────────────────────────────╮
+│ Aggregates: sum(#0)                                          │
+│ 1 row                                                    0µs │
+╰───────────────────────────────┒┎─────────────────────────────╯
+╭─ Projection ──────────────────┚┖─────────────────────────────╮
+│ Projections:                                                 │
+│ CAST(array_extract(row, CAST((v + 1) AS BIGINT)) AS BIGINT)  │
+│ 20,000 rows                                              0µs │
+╰───────────────────────────────┒┎─────────────────────────────╯
+╭─ Hash Join ───────────────────┚┖─────────────────────────────╮
+│ Join Type: INNER                                             │
+│ Conditions: texture_id = texture_id, u = col                 │
+│ 20,000 rows                                              0µs │
+╰───────────────────────────────┰┰─────────────────────────────╯
+                                ┃┠──────────────────────────────────────────────────────────╮
+╭─ Table Scan ──────────────────┚┖─────────────────────────────╮  ╭─ Table Scan ────────────┴────────────────────────╮
+│ Table: memory.main.samples                                   │  │ Table: memory.main.textures_col_based_count_test │
+│ Type: Sequential Scan                                        │  │ Type: Sequential Scan                            │
+│ Projections: texture_id, u, v                                │  │ Projections: texture_id, col, row                │
+│ Dynamic Filters:                                             │  │ Row Groups Scanned: 2 / 2                        │
+│ optional: (texture_id >= 0) AND optional: (texture_id <= 2), │  │ 192 rows                                     0µs │
+│ optional: (u >= 0) AND optional: (u <= 63)                   │  ╰──────────────────────────────────────────────────╯
+│ Row Groups Scanned: 1 / 1                                    │
+│ 20,000 rows                                              0µs │
+╰──────────────────────────────────────────────────────────────╯
+
+
+Creating texture column based table with 10 textures
+Creating tex 0/10
+Creating tex 1/10
+Creating tex 2/10
+Creating tex 3/10
+Creating tex 4/10
+Creating tex 5/10
+Creating tex 6/10
+Creating tex 7/10
+Creating tex 8/10
+Creating tex 9/10
+Warmup time for 10 textures: 0.009850217000348493 seconds
+Texture count: 10
+Mean: 1.9580271798622562 ms
+Median: 1.9541294986993307 ms
+Standard deviation: 0.04 ms
+
+Creating texture column based table with 50 textures
+Creating tex 0/50
+Creating tex 1/50
+Creating tex 2/50
+Creating tex 3/50
+Creating tex 4/50
+Creating tex 5/50
+Creating tex 6/50
+Creating tex 7/50
+Creating tex 8/50
+Creating tex 9/50
+Creating tex 10/50
+Creating tex 11/50
+Creating tex 12/50
+Creating tex 13/50
+Creating tex 14/50
+Creating tex 15/50
+Creating tex 16/50
+Creating tex 17/50
+Creating tex 18/50
+Creating tex 19/50
+Creating tex 20/50
+Creating tex 21/50
+Creating tex 22/50
+Creating tex 23/50
+Creating tex 24/50
+Creating tex 25/50
+Creating tex 26/50
+Creating tex 27/50
+Creating tex 28/50
+Creating tex 29/50
+Creating tex 30/50
+Creating tex 31/50
+Creating tex 32/50
+Creating tex 33/50
+Creating tex 34/50
+Creating tex 35/50
+Creating tex 36/50
+Creating tex 37/50
+Creating tex 38/50
+Creating tex 39/50
+Creating tex 40/50
+Creating tex 41/50
+Creating tex 42/50
+Creating tex 43/50
+Creating tex 44/50
+Creating tex 45/50
+Creating tex 46/50
+Creating tex 47/50
+Creating tex 48/50
+Creating tex 49/50
+Warmup time for 50 textures: 0.010266645000228891 seconds
+Texture count: 50
+Mean: 1.97498510038713 ms
+Median: 1.9780825014095171 ms
+Standard deviation: 0.06 ms
+
+Creating texture column based table with 200 textures
+Creating tex 0/200
+Creating tex 1/200
+Creating tex 2/200
+Creating tex 3/200
+Creating tex 4/200
+Creating tex 5/200
+Creating tex 6/200
+Creating tex 7/200
+Creating tex 8/200
+Creating tex 9/200
+Creating tex 10/200
+Creating tex 11/200
+Creating tex 12/200
+Creating tex 13/200
+Creating tex 14/200
+Creating tex 15/200
+Creating tex 16/200
+Creating tex 17/200
+Creating tex 18/200
+Creating tex 19/200
+Creating tex 20/200
+Creating tex 21/200
+Creating tex 22/200
+Creating tex 23/200
+Creating tex 24/200
+Creating tex 25/200
+Creating tex 26/200
+Creating tex 27/200
+Creating tex 28/200
+Creating tex 29/200
+Creating tex 30/200
+Creating tex 31/200
+Creating tex 32/200
+Creating tex 33/200
+Creating tex 34/200
+Creating tex 35/200
+Creating tex 36/200
+Creating tex 37/200
+Creating tex 38/200
+Creating tex 39/200
+Creating tex 40/200
+Creating tex 41/200
+Creating tex 42/200
+Creating tex 43/200
+Creating tex 44/200
+Creating tex 45/200
+Creating tex 46/200
+Creating tex 47/200
+Creating tex 48/200
+Creating tex 49/200
+Creating tex 50/200
+Creating tex 51/200
+Creating tex 52/200
+Creating tex 53/200
+Creating tex 54/200
+Creating tex 55/200
+Creating tex 56/200
+Creating tex 57/200
+Creating tex 58/200
+Creating tex 59/200
+Creating tex 60/200
+Creating tex 61/200
+Creating tex 62/200
+Creating tex 63/200
+Creating tex 64/200
+Creating tex 65/200
+Creating tex 66/200
+Creating tex 67/200
+Creating tex 68/200
+Creating tex 69/200
+Creating tex 70/200
+Creating tex 71/200
+Creating tex 72/200
+Creating tex 73/200
+Creating tex 74/200
+Creating tex 75/200
+Creating tex 76/200
+Creating tex 77/200
+Creating tex 78/200
+Creating tex 79/200
+Creating tex 80/200
+Creating tex 81/200
+Creating tex 82/200
+Creating tex 83/200
+Creating tex 84/200
+Creating tex 85/200
+Creating tex 86/200
+Creating tex 87/200
+Creating tex 88/200
+Creating tex 89/200
+Creating tex 90/200
+Creating tex 91/200
+Creating tex 92/200
+Creating tex 93/200
+Creating tex 94/200
+Creating tex 95/200
+Creating tex 96/200
+Creating tex 97/200
+Creating tex 98/200
+Creating tex 99/200
+Creating tex 100/200
+Creating tex 101/200
+Creating tex 102/200
+Creating tex 103/200
+Creating tex 104/200
+Creating tex 105/200
+Creating tex 106/200
+Creating tex 107/200
+Creating tex 108/200
+Creating tex 109/200
+Creating tex 110/200
+Creating tex 111/200
+Creating tex 112/200
+Creating tex 113/200
+Creating tex 114/200
+Creating tex 115/200
+Creating tex 116/200
+Creating tex 117/200
+Creating tex 118/200
+Creating tex 119/200
+Creating tex 120/200
+Creating tex 121/200
+Creating tex 122/200
+Creating tex 123/200
+Creating tex 124/200
+Creating tex 125/200
+Creating tex 126/200
+Creating tex 127/200
+Creating tex 128/200
+Creating tex 129/200
+Creating tex 130/200
+Creating tex 131/200
+Creating tex 132/200
+Creating tex 133/200
+Creating tex 134/200
+Creating tex 135/200
+Creating tex 136/200
+Creating tex 137/200
+Creating tex 138/200
+Creating tex 139/200
+Creating tex 140/200
+Creating tex 141/200
+Creating tex 142/200
+Creating tex 143/200
+Creating tex 144/200
+Creating tex 145/200
+Creating tex 146/200
+Creating tex 147/200
+Creating tex 148/200
+Creating tex 149/200
+Creating tex 150/200
+Creating tex 151/200
+Creating tex 152/200
+Creating tex 153/200
+Creating tex 154/200
+Creating tex 155/200
+Creating tex 156/200
+Creating tex 157/200
+Creating tex 158/200
+Creating tex 159/200
+Creating tex 160/200
+Creating tex 161/200
+Creating tex 162/200
+Creating tex 163/200
+Creating tex 164/200
+Creating tex 165/200
+Creating tex 166/200
+Creating tex 167/200
+Creating tex 168/200
+Creating tex 169/200
+Creating tex 170/200
+Creating tex 171/200
+Creating tex 172/200
+Creating tex 173/200
+Creating tex 174/200
+Creating tex 175/200
+Creating tex 176/200
+Creating tex 177/200
+Creating tex 178/200
+Creating tex 179/200
+Creating tex 180/200
+Creating tex 181/200
+Creating tex 182/200
+Creating tex 183/200
+Creating tex 184/200
+Creating tex 185/200
+Creating tex 186/200
+Creating tex 187/200
+Creating tex 188/200
+Creating tex 189/200
+Creating tex 190/200
+Creating tex 191/200
+Creating tex 192/200
+Creating tex 193/200
+Creating tex 194/200
+Creating tex 195/200
+Creating tex 196/200
+Creating tex 197/200
+Creating tex 198/200
+Creating tex 199/200
+Warmup time for 200 textures: 0.007051425000099698 seconds
+Texture count: 200
+Mean: 1.2622773799739662 ms
+Median: 1.2523665009211982 ms
+Standard deviation: 0.07 ms
+
+EXPLAIN ANALYZE for 200 textures
+╭─ Summary ───────────╮
+│ Total Time: 0.0010s │
+╰─────────────────────╯
+╭─ Ungrouped Aggregate ────────────────────────────────────────╮
+│ Aggregates: sum(#0)                                          │
+│ 1 row                                                    0µs │
+╰───────────────────────────────┒┎─────────────────────────────╯
+╭─ Projection ──────────────────┚┖─────────────────────────────╮
+│ Projections:                                                 │
+│ CAST(array_extract(row, CAST((v + 1) AS BIGINT)) AS BIGINT)  │
+│ 20,000 rows                                              0µs │
+╰───────────────────────────────┒┎─────────────────────────────╯
+╭─ Hash Join ───────────────────┚┖─────────────────────────────╮
+│ Join Type: INNER                                             │
+│ Conditions: texture_id = texture_id, col = u                 │
+│ 20,000 rows                                              0µs │
+╰───────────────────────────────┬──────────────────────────────╯
+                                ├────────────────────────────────────────────────┰┒
+╭─ Table Scan ──────────────────┴──────────────────────────────╮  ╭─ Table Scan ─┚┖────────────╮
+│ Table: memory.main.textures_col_based_count_test             │  │ Table: memory.main.samples │
+│ Type: Sequential Scan                                        │  │ Type: Sequential Scan      │
+│ Projections: texture_id, col, row                            │  │ Projections: texture_id,   │
+│ Filters: texture_id <= 2                                     │  │              u, v          │
+│ Dynamic Filters:                                             │  │ Row Groups Scanned: 1 / 1  │
+│ optional: (texture_id >= 0) AND optional: (texture_id <= 2), │  │ 20,000 rows            0µs │
+│ optional: (col >= 0) AND optional: (col <= 63)               │  ╰────────────────────────────╯
+│ Row Groups Scanned: 1 / 4                                    │
+│ 192 rows                                                 0µs │
+╰──────────────────────────────────────────────────────────────╯
+
+
+Next access pattern FLATS
+Creating FLATS
+Creating sweep like samples
+Calculating checksums
+Checksum phase passed
+
+FLATS list warmup time elapsed 0.12971524100066745 seconds
+
+Beginning benchmark for FLATS SWEEP LIST
+Total time taken for 1000000 FLATS SWEEP LIST acesses: 1.283846355001515 seconds
+Mean: 25.6761554800687 ms
+Median: 25.55301899974438 ms
+Standard deviation: 0.47 ms
+Creating flats row based representation
+┌────────────┬───────┬─────────────────────────────────────────────────────────────────────────────────────────────────┐
+│ texture_id │  row  │                                             pixels                                              │
+│   int32    │ int32 │                                             uint8[]                                             │
+├────────────┼───────┼─────────────────────────────────────────────────────────────────────────────────────────────────┤
+│          0 │     0 │ [106, 61, 251, 48, 116, 33, 153, 248, 66, 42, 102, 141, 202, 165, 126, 242, 182, 204, 118, 207, │
+│            │       │  5, 0, 129, 177, 79, 226, 70, 72, 108, 244, 247, 65, 147, 90, 157, 41, 185, 155, 164, 184, 214, │
+│            │       │  63, 250, 159, 37, 70, 86, 252, 247, 213, 128, 127, 144, 207, 238, 87, 116, 57, 241, 18, 242,   │
+│            │       │  22, 213, 53]                                                                                   │
+├────────────┼───────┼─────────────────────────────────────────────────────────────────────────────────────────────────┤
+│          0 │     1 │ [65, 147, 149, 141, 62, 27, 22, 135, 209, 37, 78, 69, 251, 104, 53, 104, 60, 61, 97, 11, 250,   │
+│            │       │  115, 102, 135, 69, 242, 44, 96, 98, 204, 124, 244, 81, 213, 103, 139, 164, 139, 48, 89, 152,   │
+│            │       │  7, 33, 61, 74, 136, 29, 63, 201, 171, 250, 75, 124, 153, 29, 147, 54, 38, 222, 36, 3, 120, 27, │
+│            │       │  96]                                                                                            │
+├────────────┼───────┼─────────────────────────────────────────────────────────────────────────────────────────────────┤
+│          0 │     2 │ [78, 134, 167, 134, 19, 65, 199, 5, 115, 151, 121, 3, 181, 178, 153, 96, 24, 187, 152, 53, 78,  │
+│            │       │  195, 210, 172, 76, 111, 255, 245, 196, 129, 182, 35, 53, 53, 229, 150, 41, 96, 12, 88, 213,    │
+│            │       │  185, 192, 150, 31, 1, 22, 62, 148, 222, 42, 180, 96, 253, 183, 5, 194, 67, 70, 109, 155, 183,  │
+│            │       │  227, 42]                                                                                       │
+├────────────┼───────┼─────────────────────────────────────────────────────────────────────────────────────────────────┤
+│          0 │     3 │ [239, 155, 229, 197, 13, 118, 130, 180, 135, 126, 102, 63, 46, 195, 2, 101, 250, 147, 244, 87,  │
+│            │       │  193, 48, 168, 114, 184, 30, 30, 241, 116, 73, 201, 109, 157, 76, 108, 147, 31, 252, 175, 150,  │
+│            │       │  30, 106, 236, 120, 63, 254, 210, 108, 195, 89, 58, 142, 88, 149, 112, 11, 26, 159, 10, 249,    │
+│            │       │  215, 13, 166, 75]                                                                              │
+├────────────┼───────┼─────────────────────────────────────────────────────────────────────────────────────────────────┤
+│          0 │     4 │ [138, 127, 87, 60, 110, 149, 8, 239, 47, 112, 209, 158, 81, 142, 202, 219, 99, 21, 127, 150,    │
+│            │       │  36, 13, 152, 249, 92, 252, 220, 121, 175, 254, 138, 182, 59, 194, 253, 38, 165, 153, 165, 122, │
+│            │       │  41, 107, 16, 167, 201, 33, 83, 202, 13, 187, 111, 226, 64, 234, 78, 241, 142, 18, 236, 28, 84, │
+│            │       │  66, 10, 74]                                                                                    │
+└────────────┴───────┴─────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+Calculating FLATS row based checksum
+checksum duckdb FLATS row based 2560043
+checksum python 2560043
+FLATS row based checksum phase passed
+FLATS row based warmup time elapsed 0.008083373000772553 seconds
+
+Beginning benchmark for FLATS SWEEP ROW BASED
+Total time taken for 1000000 FLATS SWEEP ROW BASED acesses: 0.07972420300029626 seconds
+Mean: 1.5937643200231832 ms
+Median: 1.6006064997782232 ms
+Standard deviation: 0.05 ms
+
+Moving to one row per FLATS pixel
+Creating FLATS pixel rows from original FLATS
+Creating tex 0/20 with 4096 pixels
+Creating tex 1/20 with 4096 pixels
+Creating tex 2/20 with 4096 pixels
+Creating tex 3/20 with 4096 pixels
+Creating tex 4/20 with 4096 pixels
+Creating tex 5/20 with 4096 pixels
+Creating tex 6/20 with 4096 pixels
+Creating tex 7/20 with 4096 pixels
+Creating tex 8/20 with 4096 pixels
+Creating tex 9/20 with 4096 pixels
+Creating tex 10/20 with 4096 pixels
+Creating tex 11/20 with 4096 pixels
+Creating tex 12/20 with 4096 pixels
+Creating tex 13/20 with 4096 pixels
+Creating tex 14/20 with 4096 pixels
+Creating tex 15/20 with 4096 pixels
+Creating tex 16/20 with 4096 pixels
+Creating tex 17/20 with 4096 pixels
+Creating tex 18/20 with 4096 pixels
+Creating tex 19/20 with 4096 pixels
+┌────────────┬───────┬───────┬───────────────┐
+│ texture_id │   u   │   v   │ palette_index │
+│   int32    │ int32 │ int32 │     uint8     │
+├────────────┼───────┼───────┼───────────────┤
+│          0 │     0 │     0 │           106 │
+│          0 │     1 │     0 │            61 │
+│          0 │     2 │     0 │           251 │
+│          0 │     3 │     0 │            48 │
+│          0 │     4 │     0 │           116 │
+└────────────┴───────┴───────┴───────────────┘
+
+Calculating FLATS pixel based checksum
+checksum duckdb FLATS pixel based 2560043
+checksum python 2560043
+FLATS pixel based checksum phase passed
+FLATS pixel based warmup time elapsed 0.0068575520017475355 seconds
+
+Beginning benchmark for FLATS SWEEP PIXEL BASED
+Total time taken for 1000000 FLATS SWEEP PIXEL BASED acesses: 0.06294036600047548 seconds
+Mean: 1.258124019841489 ms
+Median: 1.2465859990697936 ms
+
+Moving to FLATS stored as BLOB
+Creating FLATS BLOB representation
+Calculating FLATS BLOB based checksum
+checksum duckdb FLATS BLOB based 2560043
+checksum python 2560043
+FLATS BLOB based checksum phase passed
+FLATS BLOB based warmup time elapsed 0.014209228998879553 seconds
+
+Beginning benchmark for FLATS SWEEP BLOB BASED
+Total time taken for 1000000 FLATS SWEEP BLOB BASED acesses: 0.12150154600021779 seconds
+Mean: 2.42934455996874 ms
+Median: 2.418605999991996 ms
+Standard deviation: 0.04 ms

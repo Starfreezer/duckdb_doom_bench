@@ -1,0 +1,615 @@
+DuckDB version: 2.0.0
+Texture counts: [50, 200, 500, 1000]
+Samples per benchmark: 20000
+Warmup runs: 50
+Measured runs: 500
+
+####################################################################################################
+WALL TEXTURE SCALING
+Comparing one LIST per wall column against one row per wall texel
+FIXED WORKING SET touches only the first few textures while the table grows
+SPREAD WORKING SET distributes the samples across all textures in the table
+
+
+####################################################################################################
+####################################################################################################
+WALL SCALING BENCHMARK WITH 50 TEXTURES
+####################################################################################################
+####################################################################################################
+Creating WALL fixed working set samples
+Creating WALL spread working set samples for 50 textures
+
+Creating WALL column based representation with 50 textures
+Creating WALL texture 0/50
+WALL column based build time for 50 textures: 1.0817674859999897 seconds
+WALL column based row count for 50 textures: 3200
+
+Calculating WALL COLUMN BASED fixed working set checksum
+checksum WALL COLUMN BASED fixed working set 2549839
+Calculating WALL COLUMN BASED spread working set checksum
+checksum WALL COLUMN BASED spread working set 2529400
+WALL 50 TEXTURES COLUMN BASED FIXED WORKING SET warmup time elapsed 0.09531125299997711 seconds
+
+####################################################################################################
+Beginning benchmark for WALL 50 TEXTURES COLUMN BASED FIXED WORKING SET
+Total time taken for 10000000 WALL 50 TEXTURES COLUMN BASED FIXED WORKING SET acesses: 0.9574799380000059 seconds
+Mean: 1.9140466239995249 ms
+Median: 1.907265499994537 ms
+Standard deviation: 0.04 ms
+WALL 50 TEXTURES COLUMN BASED SPREAD WORKING SET warmup time elapsed 0.10863599800001111 seconds
+
+####################################################################################################
+Beginning benchmark for WALL 50 TEXTURES COLUMN BASED SPREAD WORKING SET
+Total time taken for 10000000 WALL 50 TEXTURES COLUMN BASED SPREAD WORKING SET acesses: 1.081855078999979 seconds
+Mean: 2.1628052900009607 ms
+Median: 2.151082500006396 ms
+Standard deviation: 0.05 ms
+
+####################################################################################################
+Creating WALL pixel based representation with 50 textures
+WALL pixel based expansion time for 50 textures: 0.12335955500003593 seconds
+WALL pixel based row count for 50 textures: 409600
+WALL relational/grouped row count ratio: 128.0
+
+Calculating WALL PIXEL BASED fixed working set checksum
+checksum WALL PIXEL BASED fixed working set 2549839
+checksum WALL COLUMN BASED fixed working set 2549839
+WALL fixed working set checksum phase passed
+
+Calculating WALL PIXEL BASED spread working set checksum
+checksum WALL PIXEL BASED spread working set 2529400
+checksum WALL COLUMN BASED spread working set 2529400
+WALL spread working set checksum phase passed
+WALL 50 TEXTURES PIXEL BASED FIXED WORKING SET warmup time elapsed 0.08555251499996075 seconds
+
+####################################################################################################
+Beginning benchmark for WALL 50 TEXTURES PIXEL BASED FIXED WORKING SET
+Total time taken for 10000000 WALL 50 TEXTURES PIXEL BASED FIXED WORKING SET acesses: 0.8529485210000303 seconds
+Mean: 1.7050241339999275 ms
+Median: 1.699410500009435 ms
+Standard deviation: 0.04 ms
+WALL 50 TEXTURES PIXEL BASED SPREAD WORKING SET warmup time elapsed 0.18917453799997475 seconds
+
+####################################################################################################
+Beginning benchmark for WALL 50 TEXTURES PIXEL BASED SPREAD WORKING SET
+Total time taken for 10000000 WALL 50 TEXTURES PIXEL BASED SPREAD WORKING SET acesses: 1.9142475280000326 seconds
+Mean: 3.8275867279999147 ms
+Median: 3.7938669999846297 ms
+Standard deviation: 0.13 ms
+
+
+####################################################################################################
+####################################################################################################
+WALL SCALING BENCHMARK WITH 200 TEXTURES
+####################################################################################################
+####################################################################################################
+Creating WALL fixed working set samples
+Creating WALL spread working set samples for 200 textures
+
+Creating WALL column based representation with 200 textures
+Creating WALL texture 0/200
+Creating WALL texture 50/200
+Creating WALL texture 100/200
+Creating WALL texture 150/200
+WALL column based build time for 200 textures: 4.824456221999981 seconds
+WALL column based row count for 200 textures: 12800
+
+Calculating WALL COLUMN BASED fixed working set checksum
+checksum WALL COLUMN BASED fixed working set 2549839
+Calculating WALL COLUMN BASED spread working set checksum
+checksum WALL COLUMN BASED spread working set 2528728
+WALL 200 TEXTURES COLUMN BASED FIXED WORKING SET warmup time elapsed 0.06773968900000682 seconds
+
+####################################################################################################
+Beginning benchmark for WALL 200 TEXTURES COLUMN BASED FIXED WORKING SET
+Total time taken for 10000000 WALL 200 TEXTURES COLUMN BASED FIXED WORKING SET acesses: 0.6792333080000503 seconds
+Mean: 1.3574617940025746 ms
+Median: 1.3469935000216537 ms
+Standard deviation: 0.05 ms
+WALL 200 TEXTURES COLUMN BASED SPREAD WORKING SET warmup time elapsed 0.07317411799999718 seconds
+
+####################################################################################################
+Beginning benchmark for WALL 200 TEXTURES COLUMN BASED SPREAD WORKING SET
+Total time taken for 10000000 WALL 200 TEXTURES COLUMN BASED SPREAD WORKING SET acesses: 0.7276670620000232 seconds
+Mean: 1.4543380360013316 ms
+Median: 1.4479459999847677 ms
+Standard deviation: 0.04 ms
+
+####################################################################################################
+Creating WALL pixel based representation with 200 textures
+WALL pixel based expansion time for 200 textures: 0.5449321030000078 seconds
+WALL pixel based row count for 200 textures: 1638400
+WALL relational/grouped row count ratio: 128.0
+
+Calculating WALL PIXEL BASED fixed working set checksum
+checksum WALL PIXEL BASED fixed working set 2549839
+checksum WALL COLUMN BASED fixed working set 2549839
+WALL fixed working set checksum phase passed
+
+Calculating WALL PIXEL BASED spread working set checksum
+checksum WALL PIXEL BASED spread working set 2528728
+checksum WALL COLUMN BASED spread working set 2528728
+WALL spread working set checksum phase passed
+WALL 200 TEXTURES PIXEL BASED FIXED WORKING SET warmup time elapsed 0.09458980400000883 seconds
+
+####################################################################################################
+Beginning benchmark for WALL 200 TEXTURES PIXEL BASED FIXED WORKING SET
+Total time taken for 10000000 WALL 200 TEXTURES PIXEL BASED FIXED WORKING SET acesses: 0.9319610089999628 seconds
+Mean: 1.8629346680007757 ms
+Median: 1.8660464999982196 ms
+Standard deviation: 0.07 ms
+WALL 200 TEXTURES PIXEL BASED SPREAD WORKING SET warmup time elapsed 0.5822706460000404 seconds
+
+####################################################################################################
+Beginning benchmark for WALL 200 TEXTURES PIXEL BASED SPREAD WORKING SET
+Total time taken for 10000000 WALL 200 TEXTURES PIXEL BASED SPREAD WORKING SET acesses: 5.812208526000006 seconds
+Mean: 11.623459280000702 ms
+Median: 11.57453549998877 ms
+Standard deviation: 0.21 ms
+
+
+####################################################################################################
+####################################################################################################
+WALL SCALING BENCHMARK WITH 500 TEXTURES
+####################################################################################################
+####################################################################################################
+Creating WALL fixed working set samples
+Creating WALL spread working set samples for 500 textures
+
+Creating WALL column based representation with 500 textures
+Creating WALL texture 0/500
+Creating WALL texture 50/500
+Creating WALL texture 100/500
+Creating WALL texture 150/500
+Creating WALL texture 200/500
+Creating WALL texture 250/500
+Creating WALL texture 300/500
+Creating WALL texture 350/500
+Creating WALL texture 400/500
+Creating WALL texture 450/500
+WALL column based build time for 500 textures: 10.471149869999977 seconds
+WALL column based row count for 500 textures: 32000
+
+Calculating WALL COLUMN BASED fixed working set checksum
+checksum WALL COLUMN BASED fixed working set 2549839
+Calculating WALL COLUMN BASED spread working set checksum
+checksum WALL COLUMN BASED spread working set 2550653
+WALL 500 TEXTURES COLUMN BASED FIXED WORKING SET warmup time elapsed 0.06068076799999744 seconds
+
+####################################################################################################
+Beginning benchmark for WALL 500 TEXTURES COLUMN BASED FIXED WORKING SET
+Total time taken for 10000000 WALL 500 TEXTURES COLUMN BASED FIXED WORKING SET acesses: 0.6050803300000211 seconds
+Mean: 1.2092755639991992 ms
+Median: 1.2037795000026108 ms
+Standard deviation: 0.04 ms
+WALL 500 TEXTURES COLUMN BASED SPREAD WORKING SET warmup time elapsed 0.07968716700003142 seconds
+
+####################################################################################################
+Beginning benchmark for WALL 500 TEXTURES COLUMN BASED SPREAD WORKING SET
+Total time taken for 10000000 WALL 500 TEXTURES COLUMN BASED SPREAD WORKING SET acesses: 0.803830878000042 seconds
+Mean: 1.6067680139998402 ms
+Median: 1.5957324999931188 ms
+Standard deviation: 0.07 ms
+
+####################################################################################################
+Creating WALL pixel based representation with 500 textures
+WALL pixel based expansion time for 500 textures: 1.2801434819999713 seconds
+WALL pixel based row count for 500 textures: 4096000
+WALL relational/grouped row count ratio: 128.0
+
+Calculating WALL PIXEL BASED fixed working set checksum
+checksum WALL PIXEL BASED fixed working set 2549839
+checksum WALL COLUMN BASED fixed working set 2549839
+WALL fixed working set checksum phase passed
+
+Calculating WALL PIXEL BASED spread working set checksum
+checksum WALL PIXEL BASED spread working set 2550653
+checksum WALL COLUMN BASED spread working set 2550653
+WALL spread working set checksum phase passed
+WALL 500 TEXTURES PIXEL BASED FIXED WORKING SET warmup time elapsed 0.08788497099999404 seconds
+
+####################################################################################################
+Beginning benchmark for WALL 500 TEXTURES PIXEL BASED FIXED WORKING SET
+Total time taken for 10000000 WALL 500 TEXTURES PIXEL BASED FIXED WORKING SET acesses: 0.8686695019999888 seconds
+Mean: 1.7364250780003658 ms
+Median: 1.7250065000098402 ms
+Standard deviation: 0.06 ms
+WALL 500 TEXTURES PIXEL BASED SPREAD WORKING SET warmup time elapsed 1.3594077899999775 seconds
+
+####################################################################################################
+Beginning benchmark for WALL 500 TEXTURES PIXEL BASED SPREAD WORKING SET
+Total time taken for 10000000 WALL 500 TEXTURES PIXEL BASED SPREAD WORKING SET acesses: 13.385620492999976 seconds
+Mean: 26.770035434000192 ms
+Median: 26.532131000010395 ms
+Standard deviation: 0.95 ms
+
+
+####################################################################################################
+####################################################################################################
+WALL SCALING BENCHMARK WITH 1000 TEXTURES
+####################################################################################################
+####################################################################################################
+Creating WALL fixed working set samples
+Creating WALL spread working set samples for 1000 textures
+
+Creating WALL column based representation with 1000 textures
+Creating WALL texture 0/1000
+Creating WALL texture 50/1000
+Creating WALL texture 100/1000
+Creating WALL texture 150/1000
+Creating WALL texture 200/1000
+Creating WALL texture 250/1000
+Creating WALL texture 300/1000
+Creating WALL texture 350/1000
+Creating WALL texture 400/1000
+Creating WALL texture 450/1000
+Creating WALL texture 500/1000
+Creating WALL texture 550/1000
+Creating WALL texture 600/1000
+Creating WALL texture 650/1000
+Creating WALL texture 700/1000
+Creating WALL texture 750/1000
+Creating WALL texture 800/1000
+Creating WALL texture 850/1000
+Creating WALL texture 900/1000
+Creating WALL texture 950/1000
+WALL column based build time for 1000 textures: 21.23429754 seconds
+WALL column based row count for 1000 textures: 64000
+
+Calculating WALL COLUMN BASED fixed working set checksum
+checksum WALL COLUMN BASED fixed working set 2549839
+Calculating WALL COLUMN BASED spread working set checksum
+checksum WALL COLUMN BASED spread working set 2527192
+WALL 1000 TEXTURES COLUMN BASED FIXED WORKING SET warmup time elapsed 0.06337511600003154 seconds
+
+####################################################################################################
+Beginning benchmark for WALL 1000 TEXTURES COLUMN BASED FIXED WORKING SET
+Total time taken for 10000000 WALL 1000 TEXTURES COLUMN BASED FIXED WORKING SET acesses: 0.6268590190000509 seconds
+Mean: 1.2528056859981689 ms
+Median: 1.2383220000060646 ms
+Standard deviation: 0.06 ms
+WALL 1000 TEXTURES COLUMN BASED SPREAD WORKING SET warmup time elapsed 0.09959631899999977 seconds
+
+####################################################################################################
+Beginning benchmark for WALL 1000 TEXTURES COLUMN BASED SPREAD WORKING SET
+Total time taken for 10000000 WALL 1000 TEXTURES COLUMN BASED SPREAD WORKING SET acesses: 0.9976162680000016 seconds
+Mean: 1.9942963320009994 ms
+Median: 1.9784290000188776 ms
+Standard deviation: 0.08 ms
+
+####################################################################################################
+Creating WALL pixel based representation with 1000 textures
+WALL pixel based expansion time for 1000 textures: 2.6430118150000226 seconds
+WALL pixel based row count for 1000 textures: 8192000
+WALL relational/grouped row count ratio: 128.0
+
+Calculating WALL PIXEL BASED fixed working set checksum
+checksum WALL PIXEL BASED fixed working set 2549839
+checksum WALL COLUMN BASED fixed working set 2549839
+WALL fixed working set checksum phase passed
+
+Calculating WALL PIXEL BASED spread working set checksum
+checksum WALL PIXEL BASED spread working set 2527192
+checksum WALL COLUMN BASED spread working set 2527192
+WALL spread working set checksum phase passed
+WALL 1000 TEXTURES PIXEL BASED FIXED WORKING SET warmup time elapsed 0.08884216500001685 seconds
+
+####################################################################################################
+Beginning benchmark for WALL 1000 TEXTURES PIXEL BASED FIXED WORKING SET
+Total time taken for 10000000 WALL 1000 TEXTURES PIXEL BASED FIXED WORKING SET acesses: 0.8887222089999796 seconds
+Mean: 1.7765287280016082 ms
+Median: 1.7621075000135988 ms
+Standard deviation: 0.06 ms
+WALL 1000 TEXTURES PIXEL BASED SPREAD WORKING SET warmup time elapsed 2.6263296949999813 seconds
+
+####################################################################################################
+Beginning benchmark for WALL 1000 TEXTURES PIXEL BASED SPREAD WORKING SET
+Total time taken for 10000000 WALL 1000 TEXTURES PIXEL BASED SPREAD WORKING SET acesses: 25.63918942500004 seconds
+Mean: 51.27677970999969 ms
+Median: 51.577964500012285 ms
+Standard deviation: 2.24 ms
+
+####################################################################################################
+FLAT TEXTURE SCALING
+Comparing one LIST per flat row against one row per flat texel
+FIXED WORKING SET touches only the first few textures while the table grows
+SPREAD WORKING SET distributes the samples across all textures in the table
+
+
+####################################################################################################
+####################################################################################################
+FLATS SCALING BENCHMARK WITH 50 TEXTURES
+####################################################################################################
+####################################################################################################
+Creating FLATS fixed working set samples
+Creating FLATS spread working set samples for 50 textures
+
+Creating FLATS row based representation with 50 textures
+Creating FLAT texture 0/50
+FLATS row based build time for 50 textures: 0.9707648950000021 seconds
+FLATS row based row count for 50 textures: 3200
+
+Calculating FLATS ROW BASED fixed working set checksum
+checksum FLATS ROW BASED fixed working set 2542408
+Calculating FLATS ROW BASED spread working set checksum
+checksum FLATS ROW BASED spread working set 2550945
+FLATS 50 TEXTURES ROW BASED FIXED WORKING SET warmup time elapsed 0.07711322299996937 seconds
+
+####################################################################################################
+Beginning benchmark for FLATS 50 TEXTURES ROW BASED FIXED WORKING SET
+Total time taken for 10000000 FLATS 50 TEXTURES ROW BASED FIXED WORKING SET acesses: 0.7778605529999822 seconds
+Mean: 1.5547467860004645 ms
+Median: 1.5430439999875034 ms
+Standard deviation: 0.06 ms
+FLATS 50 TEXTURES ROW BASED SPREAD WORKING SET warmup time elapsed 0.08684957000002669 seconds
+
+####################################################################################################
+Beginning benchmark for FLATS 50 TEXTURES ROW BASED SPREAD WORKING SET
+Total time taken for 10000000 FLATS 50 TEXTURES ROW BASED SPREAD WORKING SET acesses: 0.8578452170000332 seconds
+Mean: 1.7147660360000145 ms
+Median: 1.682710499977702 ms
+Standard deviation: 0.28 ms
+
+####################################################################################################
+Creating FLATS pixel based representation with 50 textures
+FLATS pixel based expansion time for 50 textures: 0.0632655049999471 seconds
+FLATS pixel based row count for 50 textures: 204800
+FLATS relational/grouped row count ratio: 64.0
+
+Calculating FLATS PIXEL BASED fixed working set checksum
+checksum FLATS PIXEL BASED fixed working set 2542408
+checksum FLATS ROW BASED fixed working set 2542408
+FLATS fixed working set checksum phase passed
+
+Calculating FLATS PIXEL BASED spread working set checksum
+checksum FLATS PIXEL BASED spread working set 2550945
+checksum FLATS ROW BASED spread working set 2550945
+FLATS spread working set checksum phase passed
+FLATS 50 TEXTURES PIXEL BASED FIXED WORKING SET warmup time elapsed 0.07331890899996552 seconds
+
+####################################################################################################
+Beginning benchmark for FLATS 50 TEXTURES PIXEL BASED FIXED WORKING SET
+Total time taken for 10000000 FLATS 50 TEXTURES PIXEL BASED FIXED WORKING SET acesses: 0.7280024209999851 seconds
+Mean: 1.4551101479989939 ms
+Median: 1.4471569999727762 ms
+Standard deviation: 0.05 ms
+FLATS 50 TEXTURES PIXEL BASED SPREAD WORKING SET warmup time elapsed 0.12839939700000969 seconds
+
+####################################################################################################
+Beginning benchmark for FLATS 50 TEXTURES PIXEL BASED SPREAD WORKING SET
+Total time taken for 10000000 FLATS 50 TEXTURES PIXEL BASED SPREAD WORKING SET acesses: 1.2984487229999786 seconds
+Mean: 2.5959994239985917 ms
+Median: 2.575309999997444 ms
+Standard deviation: 0.22 ms
+
+
+####################################################################################################
+####################################################################################################
+FLATS SCALING BENCHMARK WITH 200 TEXTURES
+####################################################################################################
+####################################################################################################
+Creating FLATS fixed working set samples
+Creating FLATS spread working set samples for 200 textures
+
+Creating FLATS row based representation with 200 textures
+Creating FLAT texture 0/200
+Creating FLAT texture 50/200
+Creating FLAT texture 100/200
+Creating FLAT texture 150/200
+FLATS row based build time for 200 textures: 3.960795149999967 seconds
+FLATS row based row count for 200 textures: 12800
+
+Calculating FLATS ROW BASED fixed working set checksum
+checksum FLATS ROW BASED fixed working set 2542408
+Calculating FLATS ROW BASED spread working set checksum
+checksum FLATS ROW BASED spread working set 2562327
+FLATS 200 TEXTURES ROW BASED FIXED WORKING SET warmup time elapsed 0.060927105999951436 seconds
+
+####################################################################################################
+Beginning benchmark for FLATS 200 TEXTURES ROW BASED FIXED WORKING SET
+Total time taken for 10000000 FLATS 200 TEXTURES ROW BASED FIXED WORKING SET acesses: 0.6104011600000376 seconds
+Mean: 1.2199353440000777 ms
+Median: 1.2122244999943632 ms
+Standard deviation: 0.06 ms
+FLATS 200 TEXTURES ROW BASED SPREAD WORKING SET warmup time elapsed 0.06549025499998606 seconds
+
+####################################################################################################
+Beginning benchmark for FLATS 200 TEXTURES ROW BASED SPREAD WORKING SET
+Total time taken for 10000000 FLATS 200 TEXTURES ROW BASED SPREAD WORKING SET acesses: 0.668763652999985 seconds
+Mean: 1.3366137979995756 ms
+Median: 1.3168809999797304 ms
+Standard deviation: 0.08 ms
+
+####################################################################################################
+Creating FLATS pixel based representation with 200 textures
+FLATS pixel based expansion time for 200 textures: 0.2534659209999859 seconds
+FLATS pixel based row count for 200 textures: 819200
+FLATS relational/grouped row count ratio: 64.0
+
+Calculating FLATS PIXEL BASED fixed working set checksum
+checksum FLATS PIXEL BASED fixed working set 2542408
+checksum FLATS ROW BASED fixed working set 2542408
+FLATS fixed working set checksum phase passed
+
+Calculating FLATS PIXEL BASED spread working set checksum
+checksum FLATS PIXEL BASED spread working set 2562327
+checksum FLATS ROW BASED spread working set 2562327
+FLATS spread working set checksum phase passed
+FLATS 200 TEXTURES PIXEL BASED FIXED WORKING SET warmup time elapsed 0.07255089999995334 seconds
+
+####################################################################################################
+Beginning benchmark for FLATS 200 TEXTURES PIXEL BASED FIXED WORKING SET
+Total time taken for 10000000 FLATS 200 TEXTURES PIXEL BASED FIXED WORKING SET acesses: 0.7245581239999979 seconds
+Mean: 1.4482168239995872 ms
+Median: 1.4361615000382244 ms
+Standard deviation: 0.06 ms
+FLATS 200 TEXTURES PIXEL BASED SPREAD WORKING SET warmup time elapsed 0.3360384649999446 seconds
+
+####################################################################################################
+Beginning benchmark for FLATS 200 TEXTURES PIXEL BASED SPREAD WORKING SET
+Total time taken for 10000000 FLATS 200 TEXTURES PIXEL BASED SPREAD WORKING SET acesses: 3.277757092999991 seconds
+Mean: 6.554612057999293 ms
+Median: 6.682504499991637 ms
+Standard deviation: 0.31 ms
+
+
+####################################################################################################
+####################################################################################################
+FLATS SCALING BENCHMARK WITH 500 TEXTURES
+####################################################################################################
+####################################################################################################
+Creating FLATS fixed working set samples
+Creating FLATS spread working set samples for 500 textures
+
+Creating FLATS row based representation with 500 textures
+Creating FLAT texture 0/500
+Creating FLAT texture 50/500
+Creating FLAT texture 100/500
+Creating FLAT texture 150/500
+Creating FLAT texture 200/500
+Creating FLAT texture 250/500
+Creating FLAT texture 300/500
+Creating FLAT texture 350/500
+Creating FLAT texture 400/500
+Creating FLAT texture 450/500
+FLATS row based build time for 500 textures: 9.599204889999953 seconds
+FLATS row based row count for 500 textures: 32000
+
+Calculating FLATS ROW BASED fixed working set checksum
+checksum FLATS ROW BASED fixed working set 2542408
+Calculating FLATS ROW BASED spread working set checksum
+checksum FLATS ROW BASED spread working set 2535476
+FLATS 500 TEXTURES ROW BASED FIXED WORKING SET warmup time elapsed 0.06024536600000374 seconds
+
+####################################################################################################
+Beginning benchmark for FLATS 500 TEXTURES ROW BASED FIXED WORKING SET
+Total time taken for 10000000 FLATS 500 TEXTURES ROW BASED FIXED WORKING SET acesses: 0.6040505210000333 seconds
+Mean: 1.207226162000211 ms
+Median: 1.1959540000248126 ms
+Standard deviation: 0.06 ms
+FLATS 500 TEXTURES ROW BASED SPREAD WORKING SET warmup time elapsed 0.07686078000000407 seconds
+
+####################################################################################################
+Beginning benchmark for FLATS 500 TEXTURES ROW BASED SPREAD WORKING SET
+Total time taken for 10000000 FLATS 500 TEXTURES ROW BASED SPREAD WORKING SET acesses: 0.7611782750000202 seconds
+Mean: 1.5214880200019252 ms
+Median: 1.5085585000065294 ms
+Standard deviation: 0.06 ms
+
+####################################################################################################
+Creating FLATS pixel based representation with 500 textures
+FLATS pixel based expansion time for 500 textures: 0.6663283560000082 seconds
+FLATS pixel based row count for 500 textures: 2048000
+FLATS relational/grouped row count ratio: 64.0
+
+Calculating FLATS PIXEL BASED fixed working set checksum
+checksum FLATS PIXEL BASED fixed working set 2542408
+checksum FLATS ROW BASED fixed working set 2542408
+FLATS fixed working set checksum phase passed
+
+Calculating FLATS PIXEL BASED spread working set checksum
+checksum FLATS PIXEL BASED spread working set 2535476
+checksum FLATS ROW BASED spread working set 2535476
+FLATS spread working set checksum phase passed
+FLATS 500 TEXTURES PIXEL BASED FIXED WORKING SET warmup time elapsed 0.07353606099997023 seconds
+
+####################################################################################################
+Beginning benchmark for FLATS 500 TEXTURES PIXEL BASED FIXED WORKING SET
+Total time taken for 10000000 FLATS 500 TEXTURES PIXEL BASED FIXED WORKING SET acesses: 0.7266079259999856 seconds
+Mean: 1.4523162800001046 ms
+Median: 1.444187000004149 ms
+Standard deviation: 0.05 ms
+FLATS 500 TEXTURES PIXEL BASED SPREAD WORKING SET warmup time elapsed 0.6922410029999924 seconds
+
+####################################################################################################
+Beginning benchmark for FLATS 500 TEXTURES PIXEL BASED SPREAD WORKING SET
+Total time taken for 10000000 FLATS 500 TEXTURES PIXEL BASED SPREAD WORKING SET acesses: 7.024153146999993 seconds
+Mean: 14.047272019999014 ms
+Median: 13.936583999964114 ms
+Standard deviation: 0.51 ms
+
+
+####################################################################################################
+####################################################################################################
+FLATS SCALING BENCHMARK WITH 1000 TEXTURES
+####################################################################################################
+####################################################################################################
+Creating FLATS fixed working set samples
+Creating FLATS spread working set samples for 1000 textures
+
+Creating FLATS row based representation with 1000 textures
+Creating FLAT texture 0/1000
+Creating FLAT texture 50/1000
+Creating FLAT texture 100/1000
+Creating FLAT texture 150/1000
+Creating FLAT texture 200/1000
+Creating FLAT texture 250/1000
+Creating FLAT texture 300/1000
+Creating FLAT texture 350/1000
+Creating FLAT texture 400/1000
+Creating FLAT texture 450/1000
+Creating FLAT texture 500/1000
+Creating FLAT texture 550/1000
+Creating FLAT texture 600/1000
+Creating FLAT texture 650/1000
+Creating FLAT texture 700/1000
+Creating FLAT texture 750/1000
+Creating FLAT texture 800/1000
+Creating FLAT texture 850/1000
+Creating FLAT texture 900/1000
+Creating FLAT texture 950/1000
+FLATS row based build time for 1000 textures: 19.372603514000048 seconds
+FLATS row based row count for 1000 textures: 64000
+
+Calculating FLATS ROW BASED fixed working set checksum
+checksum FLATS ROW BASED fixed working set 2542408
+Calculating FLATS ROW BASED spread working set checksum
+checksum FLATS ROW BASED spread working set 2569499
+FLATS 1000 TEXTURES ROW BASED FIXED WORKING SET warmup time elapsed 0.06028024699992329 seconds
+
+####################################################################################################
+Beginning benchmark for FLATS 1000 TEXTURES ROW BASED FIXED WORKING SET
+Total time taken for 10000000 FLATS 1000 TEXTURES ROW BASED FIXED WORKING SET acesses: 0.6054990699999507 seconds
+Mean: 1.2101228019987502 ms
+Median: 1.2027994999925795 ms
+Standard deviation: 0.05 ms
+FLATS 1000 TEXTURES ROW BASED SPREAD WORKING SET warmup time elapsed 0.0925153790000195 seconds
+
+####################################################################################################
+Beginning benchmark for FLATS 1000 TEXTURES ROW BASED SPREAD WORKING SET
+Total time taken for 10000000 FLATS 1000 TEXTURES ROW BASED SPREAD WORKING SET acesses: 0.9213010280000162 seconds
+Mean: 1.8417575939997732 ms
+Median: 1.835939999978109 ms
+Standard deviation: 0.04 ms
+
+####################################################################################################
+Creating FLATS pixel based representation with 1000 textures
+FLATS pixel based expansion time for 1000 textures: 1.394002764999982 seconds
+FLATS pixel based row count for 1000 textures: 4096000
+FLATS relational/grouped row count ratio: 64.0
+
+Calculating FLATS PIXEL BASED fixed working set checksum
+checksum FLATS PIXEL BASED fixed working set 2542408
+checksum FLATS ROW BASED fixed working set 2542408
+FLATS fixed working set checksum phase passed
+
+Calculating FLATS PIXEL BASED spread working set checksum
+checksum FLATS PIXEL BASED spread working set 2569499
+checksum FLATS ROW BASED spread working set 2569499
+FLATS spread working set checksum phase passed
+FLATS 1000 TEXTURES PIXEL BASED FIXED WORKING SET warmup time elapsed 0.07272310100006507 seconds
+
+####################################################################################################
+Beginning benchmark for FLATS 1000 TEXTURES PIXEL BASED FIXED WORKING SET
+Total time taken for 10000000 FLATS 1000 TEXTURES PIXEL BASED FIXED WORKING SET acesses: 0.7234914780000281 seconds
+Mean: 1.4461135559988634 ms
+Median: 1.4351009999700182 ms
+Standard deviation: 0.06 ms
+FLATS 1000 TEXTURES PIXEL BASED SPREAD WORKING SET warmup time elapsed 1.2927961820000746 seconds
+
+####################################################################################################
+Beginning benchmark for FLATS 1000 TEXTURES PIXEL BASED SPREAD WORKING SET
+Total time taken for 10000000 FLATS 1000 TEXTURES PIXEL BASED SPREAD WORKING SET acesses: 13.12863246300003 seconds
+Mean: 26.25616650200095 ms
+Median: 26.108583499990345 ms
+Standard deviation: 0.68 ms

@@ -1,9 +1,0 @@
-DuckDB version: 2.0.0
-Creating texture lists
-Inserting textures
-Sampling textures
-Calculating sql checksum
-Calculating python checksum
-checksum duckdb 2549839
-checksum python 2549839
-Checksum phase passed
